@@ -1,0 +1,2066 @@
+PS C:\Users\barto> cd ~
+PS C:\Users\barto> Remove-Item -Recurse -Force rta_env
+PS C:\Users\barto> py -3.13 -m venv rta_env
+PS C:\Users\barto> .\rta_env\Scripts\Activate
+(rta_env) PS C:\Users\barto> pip install --upgrade pip
+Requirement already satisfied: pip in .\rta_env\Lib\site-packages (26.0.1)
+(rta_env) PS C:\Users\barto> pip install jupyterlab pandas numpy matplotlib scikit-learn requests
+Collecting jupyterlab
+  Using cached jupyterlab-4.5.6-py3-none-any.whl.metadata (16 kB)
+Collecting pandas
+  Downloading pandas-3.0.2-cp313-cp313-win_amd64.whl.metadata (19 kB)
+Collecting numpy
+  Downloading numpy-2.4.4-cp313-cp313-win_amd64.whl.metadata (6.6 kB)
+Collecting matplotlib
+  Downloading matplotlib-3.10.8-cp313-cp313-win_amd64.whl.metadata (52 kB)
+Collecting scikit-learn
+  Downloading scikit_learn-1.8.0-cp313-cp313-win_amd64.whl.metadata (11 kB)
+Collecting requests
+  Downloading requests-2.33.1-py3-none-any.whl.metadata (4.8 kB)
+Collecting async-lru>=1.0.0 (from jupyterlab)
+  Downloading async_lru-2.3.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting httpx<1,>=0.25.0 (from jupyterlab)
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting ipykernel!=6.30.0,>=6.5.0 (from jupyterlab)
+  Downloading ipykernel-7.2.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting jinja2>=3.0.3 (from jupyterlab)
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting jupyter-core (from jupyterlab)
+  Downloading jupyter_core-5.9.1-py3-none-any.whl.metadata (1.5 kB)
+Collecting jupyter-lsp>=2.0.0 (from jupyterlab)
+  Downloading jupyter_lsp-2.3.1-py3-none-any.whl.metadata (1.8 kB)
+Collecting jupyter-server<3,>=2.4.0 (from jupyterlab)
+  Downloading jupyter_server-2.17.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting jupyterlab-server<3,>=2.28.0 (from jupyterlab)
+  Downloading jupyterlab_server-2.28.0-py3-none-any.whl.metadata (5.9 kB)
+Collecting notebook-shim>=0.2 (from jupyterlab)
+  Downloading notebook_shim-0.2.4-py3-none-any.whl.metadata (4.0 kB)
+Collecting packaging (from jupyterlab)
+  Using cached packaging-26.1-py3-none-any.whl.metadata (3.5 kB)
+Collecting setuptools>=41.1.0 (from jupyterlab)
+  Using cached setuptools-82.0.1-py3-none-any.whl.metadata (6.5 kB)
+Collecting tornado>=6.2.0 (from jupyterlab)
+  Downloading tornado-6.5.5-cp39-abi3-win_amd64.whl.metadata (2.9 kB)
+Collecting traitlets (from jupyterlab)
+  Downloading traitlets-5.14.3-py3-none-any.whl.metadata (10 kB)
+Collecting anyio (from httpx<1,>=0.25.0->jupyterlab)
+  Downloading anyio-4.13.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting certifi (from httpx<1,>=0.25.0->jupyterlab)
+  Downloading certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx<1,>=0.25.0->jupyterlab)
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx<1,>=0.25.0->jupyterlab)
+  Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx<1,>=0.25.0->jupyterlab)
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting argon2-cffi>=21.1 (from jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading argon2_cffi-25.1.0-py3-none-any.whl.metadata (4.1 kB)
+Collecting jupyter-client>=7.4.4 (from jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading jupyter_client-8.8.0-py3-none-any.whl.metadata (8.4 kB)
+Collecting jupyter-events>=0.11.0 (from jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading jupyter_events-0.12.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting jupyter-server-terminals>=0.4.4 (from jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading jupyter_server_terminals-0.5.4-py3-none-any.whl.metadata (5.9 kB)
+Collecting nbconvert>=6.4.4 (from jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading nbconvert-7.17.1-py3-none-any.whl.metadata (8.4 kB)
+Collecting nbformat>=5.3.0 (from jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading nbformat-5.10.4-py3-none-any.whl.metadata (3.6 kB)
+Collecting prometheus-client>=0.9 (from jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading prometheus_client-0.25.0-py3-none-any.whl.metadata (2.1 kB)
+Collecting pywinpty>=2.0.1 (from jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading pywinpty-3.0.3-cp313-cp313-win_amd64.whl.metadata (5.9 kB)
+Collecting pyzmq>=24 (from jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading pyzmq-27.1.0-cp312-abi3-win_amd64.whl.metadata (6.0 kB)
+Collecting send2trash>=1.8.2 (from jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading send2trash-2.1.0-py3-none-any.whl.metadata (4.1 kB)
+Collecting terminado>=0.8.3 (from jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading terminado-0.18.1-py3-none-any.whl.metadata (5.8 kB)
+Collecting websocket-client>=1.7 (from jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading websocket_client-1.9.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting babel>=2.10 (from jupyterlab-server<3,>=2.28.0->jupyterlab)
+  Downloading babel-2.18.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting json5>=0.9.0 (from jupyterlab-server<3,>=2.28.0->jupyterlab)
+  Downloading json5-0.14.0-py3-none-any.whl.metadata (36 kB)
+Collecting jsonschema>=4.18.0 (from jupyterlab-server<3,>=2.28.0->jupyterlab)
+  Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting python-dateutil>=2.8.2 (from pandas)
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting tzdata (from pandas)
+  Downloading tzdata-2026.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting contourpy>=1.0.1 (from matplotlib)
+  Downloading contourpy-1.3.3-cp313-cp313-win_amd64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib)
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib)
+  Downloading fonttools-4.62.1-cp313-cp313-win_amd64.whl.metadata (119 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib)
+  Downloading kiwisolver-1.5.0-cp313-cp313-win_amd64.whl.metadata (5.2 kB)
+Collecting pillow>=8 (from matplotlib)
+  Downloading pillow-12.2.0-cp313-cp313-win_amd64.whl.metadata (9.0 kB)
+Collecting pyparsing>=3 (from matplotlib)
+  Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+Collecting scipy>=1.10.0 (from scikit-learn)
+  Downloading scipy-1.17.1-cp313-cp313-win_amd64.whl.metadata (60 kB)
+Collecting joblib>=1.3.0 (from scikit-learn)
+  Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+Collecting threadpoolctl>=3.2.0 (from scikit-learn)
+  Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Collecting charset_normalizer<4,>=2 (from requests)
+  Downloading charset_normalizer-3.4.7-cp313-cp313-win_amd64.whl.metadata (41 kB)
+Collecting urllib3<3,>=1.26 (from requests)
+  Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+Collecting argon2-cffi-bindings (from argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading argon2_cffi_bindings-25.1.0-cp39-abi3-win_amd64.whl.metadata (7.5 kB)
+Collecting comm>=0.1.1 (from ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Downloading comm-0.2.3-py3-none-any.whl.metadata (3.7 kB)
+Collecting debugpy>=1.6.5 (from ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Downloading debugpy-1.8.20-cp313-cp313-win_amd64.whl.metadata (1.5 kB)
+Collecting ipython>=7.23.1 (from ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Downloading ipython-9.12.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting matplotlib-inline>=0.1 (from ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Downloading matplotlib_inline-0.2.1-py3-none-any.whl.metadata (2.3 kB)
+Collecting nest-asyncio>=1.4 (from ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Downloading nest_asyncio-1.6.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting psutil>=5.7 (from ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Downloading psutil-7.2.2-cp37-abi3-win_amd64.whl.metadata (22 kB)
+Collecting colorama>=0.4.4 (from ipython>=7.23.1->ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting decorator>=5.1.0 (from ipython>=7.23.1->ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting ipython-pygments-lexers>=1.0.0 (from ipython>=7.23.1->ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Downloading ipython_pygments_lexers-1.1.1-py3-none-any.whl.metadata (1.1 kB)
+Collecting jedi>=0.18.2 (from ipython>=7.23.1->ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Downloading jedi-0.19.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting prompt_toolkit<3.1.0,>=3.0.41 (from ipython>=7.23.1->ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Downloading prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+Collecting pygments>=2.14.0 (from ipython>=7.23.1->ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Downloading pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting stack_data>=0.6.0 (from ipython>=7.23.1->ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Downloading stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+Collecting wcwidth (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=7.23.1->ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Downloading wcwidth-0.6.0-py3-none-any.whl.metadata (30 kB)
+Collecting parso<0.9.0,>=0.8.4 (from jedi>=0.18.2->ipython>=7.23.1->ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Downloading parso-0.8.6-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting MarkupSafe>=2.0 (from jinja2>=3.0.3->jupyterlab)
+  Downloading markupsafe-3.0.3-cp313-cp313-win_amd64.whl.metadata (2.8 kB)
+Collecting attrs>=22.2.0 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.28.0->jupyterlab)
+  Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.28.0->jupyterlab)
+  Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.28.0->jupyterlab)
+  Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.28.0->jupyterlab)
+  Downloading rpds_py-0.30.0-cp313-cp313-win_amd64.whl.metadata (4.2 kB)
+Collecting platformdirs>=2.5 (from jupyter-core->jupyterlab)
+  Downloading platformdirs-4.9.6-py3-none-any.whl.metadata (4.7 kB)
+Collecting python-json-logger>=2.0.4 (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading python_json_logger-4.1.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting pyyaml>=5.3 (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading pyyaml-6.0.3-cp313-cp313-win_amd64.whl.metadata (2.4 kB)
+Collecting rfc3339-validator (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting rfc3986-validator>=0.1.1 (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading rfc3986_validator-0.1.1-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting fqdn (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading fqdn-1.5.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting isoduration (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading isoduration-20.11.0-py3-none-any.whl.metadata (5.7 kB)
+Collecting jsonpointer>1.13 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading jsonpointer-3.1.1-py3-none-any.whl.metadata (2.4 kB)
+Collecting rfc3987-syntax>=1.1.0 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading rfc3987_syntax-1.1.0-py3-none-any.whl.metadata (7.7 kB)
+Collecting uri-template (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading uri_template-1.3.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting webcolors>=24.6.0 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading webcolors-25.10.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting beautifulsoup4 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading beautifulsoup4-4.14.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting bleach!=5.0.0 (from bleach[css]!=5.0.0->nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading bleach-6.3.0-py3-none-any.whl.metadata (31 kB)
+Collecting defusedxml (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+Collecting jupyterlab-pygments (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading jupyterlab_pygments-0.3.0-py3-none-any.whl.metadata (4.4 kB)
+Collecting mistune<4,>=2.0.3 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading mistune-3.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting nbclient>=0.5.0 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading nbclient-0.10.4-py3-none-any.whl.metadata (8.3 kB)
+Collecting pandocfilters>=1.4.1 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading pandocfilters-1.5.1-py2.py3-none-any.whl.metadata (9.0 kB)
+Collecting webencodings (from bleach!=5.0.0->bleach[css]!=5.0.0->nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+Collecting tinycss2<1.5,>=1.1.0 (from bleach[css]!=5.0.0->nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading tinycss2-1.4.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting fastjsonschema>=2.15 (from nbformat>=5.3.0->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading fastjsonschema-2.21.2-py3-none-any.whl.metadata (2.3 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas)
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting lark>=1.2.2 (from rfc3987-syntax>=1.1.0->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading lark-1.3.1-py3-none-any.whl.metadata (1.8 kB)
+Collecting executing>=1.2.0 (from stack_data>=0.6.0->ipython>=7.23.1->ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Downloading executing-2.2.1-py2.py3-none-any.whl.metadata (8.9 kB)
+Collecting asttokens>=2.1.0 (from stack_data>=0.6.0->ipython>=7.23.1->ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Downloading asttokens-3.0.1-py3-none-any.whl.metadata (4.9 kB)
+Collecting pure-eval (from stack_data>=0.6.0->ipython>=7.23.1->ipykernel!=6.30.0,>=6.5.0->jupyterlab)
+  Downloading pure_eval-0.2.3-py3-none-any.whl.metadata (6.3 kB)
+Collecting cffi>=1.0.1 (from argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading cffi-2.0.0-cp313-cp313-win_amd64.whl.metadata (2.6 kB)
+Collecting pycparser (from cffi>=1.0.1->argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting soupsieve>=1.6.1 (from beautifulsoup4->nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading soupsieve-2.8.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting typing-extensions>=4.0.0 (from beautifulsoup4->nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting arrow>=0.15.0 (from isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab)
+  Downloading arrow-1.4.0-py3-none-any.whl.metadata (7.7 kB)
+Downloading jupyterlab-4.5.6-py3-none-any.whl (12.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 11.8 MB/s  0:00:01
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading jupyter_server-2.17.0-py3-none-any.whl (388 kB)
+Downloading jupyterlab_server-2.28.0-py3-none-any.whl (59 kB)
+Downloading pandas-3.0.2-cp313-cp313-win_amd64.whl (9.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 12.5 MB/s  0:00:00
+Downloading numpy-2.4.4-cp313-cp313-win_amd64.whl (12.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 12.6 MB/s  0:00:00
+Downloading matplotlib-3.10.8-cp313-cp313-win_amd64.whl (8.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.1/8.1 MB 12.9 MB/s  0:00:00
+Downloading scikit_learn-1.8.0-cp313-cp313-win_amd64.whl (8.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.0/8.0 MB 15.9 MB/s  0:00:00
+Downloading requests-2.33.1-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.4.7-cp313-cp313-win_amd64.whl (158 kB)
+Downloading idna-3.11-py3-none-any.whl (71 kB)
+Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+Downloading anyio-4.13.0-py3-none-any.whl (114 kB)
+Downloading argon2_cffi-25.1.0-py3-none-any.whl (14 kB)
+Downloading async_lru-2.3.0-py3-none-any.whl (8.4 kB)
+Downloading babel-2.18.0-py3-none-any.whl (10.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 10.0 MB/s  0:00:01
+Downloading certifi-2026.2.25-py3-none-any.whl (153 kB)
+Downloading contourpy-1.3.3-cp313-cp313-win_amd64.whl (226 kB)
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.62.1-cp313-cp313-win_amd64.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 8.5 MB/s  0:00:00
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading ipykernel-7.2.0-py3-none-any.whl (118 kB)
+Downloading comm-0.2.3-py3-none-any.whl (7.3 kB)
+Downloading debugpy-1.8.20-cp313-cp313-win_amd64.whl (5.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 12.0 MB/s  0:00:00
+Downloading ipython-9.12.0-py3-none-any.whl (625 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 625.7/625.7 kB 9.9 MB/s  0:00:00
+Downloading prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading decorator-5.2.1-py3-none-any.whl (9.2 kB)
+Downloading ipython_pygments_lexers-1.1.1-py3-none-any.whl (8.1 kB)
+Downloading jedi-0.19.2-py2.py3-none-any.whl (1.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 10.4 MB/s  0:00:00
+Downloading parso-0.8.6-py2.py3-none-any.whl (106 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+Downloading json5-0.14.0-py3-none-any.whl (36 kB)
+Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Downloading jupyter_client-8.8.0-py3-none-any.whl (107 kB)
+Downloading jupyter_core-5.9.1-py3-none-any.whl (29 kB)
+Downloading jupyter_events-0.12.0-py3-none-any.whl (19 kB)
+Downloading jsonpointer-3.1.1-py3-none-any.whl (7.7 kB)
+Downloading jupyter_lsp-2.3.1-py3-none-any.whl (77 kB)
+Downloading jupyter_server_terminals-0.5.4-py3-none-any.whl (13 kB)
+Downloading kiwisolver-1.5.0-cp313-cp313-win_amd64.whl (73 kB)
+Downloading markupsafe-3.0.3-cp313-cp313-win_amd64.whl (15 kB)
+Downloading matplotlib_inline-0.2.1-py3-none-any.whl (9.5 kB)
+Downloading nbconvert-7.17.1-py3-none-any.whl (261 kB)
+Downloading mistune-3.2.0-py3-none-any.whl (53 kB)
+Downloading bleach-6.3.0-py3-none-any.whl (164 kB)
+Downloading tinycss2-1.4.0-py3-none-any.whl (26 kB)
+Downloading nbclient-0.10.4-py3-none-any.whl (25 kB)
+Downloading nbformat-5.10.4-py3-none-any.whl (78 kB)
+Downloading fastjsonschema-2.21.2-py3-none-any.whl (24 kB)
+Downloading nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+Downloading notebook_shim-0.2.4-py3-none-any.whl (13 kB)
+Using cached packaging-26.1-py3-none-any.whl (95 kB)
+Downloading pandocfilters-1.5.1-py2.py3-none-any.whl (8.7 kB)
+Downloading pillow-12.2.0-cp313-cp313-win_amd64.whl (7.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 9.0 MB/s  0:00:00
+Downloading platformdirs-4.9.6-py3-none-any.whl (21 kB)
+Downloading prometheus_client-0.25.0-py3-none-any.whl (64 kB)
+Downloading psutil-7.2.2-cp37-abi3-win_amd64.whl (137 kB)
+Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 20.6 MB/s  0:00:00
+Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading python_json_logger-4.1.0-py3-none-any.whl (15 kB)
+Downloading pywinpty-3.0.3-cp313-cp313-win_amd64.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 12.7 MB/s  0:00:00
+Downloading pyyaml-6.0.3-cp313-cp313-win_amd64.whl (154 kB)
+Downloading pyzmq-27.1.0-cp312-abi3-win_amd64.whl (619 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 619.5/619.5 kB 4.2 MB/s  0:00:00
+Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+Downloading rfc3986_validator-0.1.1-py2.py3-none-any.whl (4.2 kB)
+Downloading rfc3987_syntax-1.1.0-py3-none-any.whl (8.0 kB)
+Downloading lark-1.3.1-py3-none-any.whl (113 kB)
+Downloading rpds_py-0.30.0-cp313-cp313-win_amd64.whl (240 kB)
+Downloading scipy-1.17.1-cp313-cp313-win_amd64.whl (36.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.5/36.5 MB 12.5 MB/s  0:00:02
+Downloading send2trash-2.1.0-py3-none-any.whl (17 kB)
+Using cached setuptools-82.0.1-py3-none-any.whl (1.0 MB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading stack_data-0.6.3-py3-none-any.whl (24 kB)
+Downloading asttokens-3.0.1-py3-none-any.whl (27 kB)
+Downloading executing-2.2.1-py2.py3-none-any.whl (28 kB)
+Downloading terminado-0.18.1-py3-none-any.whl (14 kB)
+Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Downloading tornado-6.5.5-cp39-abi3-win_amd64.whl (448 kB)
+Downloading traitlets-5.14.3-py3-none-any.whl (85 kB)
+Downloading webcolors-25.10.0-py3-none-any.whl (14 kB)
+Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Downloading websocket_client-1.9.0-py3-none-any.whl (82 kB)
+Downloading argon2_cffi_bindings-25.1.0-cp39-abi3-win_amd64.whl (31 kB)
+Downloading cffi-2.0.0-cp313-cp313-win_amd64.whl (183 kB)
+Downloading beautifulsoup4-4.14.3-py3-none-any.whl (107 kB)
+Downloading soupsieve-2.8.3-py3-none-any.whl (37 kB)
+Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Downloading fqdn-1.5.1-py3-none-any.whl (9.1 kB)
+Downloading isoduration-20.11.0-py3-none-any.whl (11 kB)
+Downloading arrow-1.4.0-py3-none-any.whl (68 kB)
+Downloading jupyterlab_pygments-0.3.0-py3-none-any.whl (15 kB)
+Downloading pure_eval-0.2.3-py3-none-any.whl (11 kB)
+Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+Downloading tzdata-2026.1-py2.py3-none-any.whl (348 kB)
+Downloading uri_template-1.3.0-py3-none-any.whl (11 kB)
+Downloading wcwidth-0.6.0-py3-none-any.whl (94 kB)
+Installing collected packages: webencodings, pure-eval, fastjsonschema, websocket-client, webcolors, wcwidth, urllib3, uri-template, tzdata, typing-extensions, traitlets, tornado, tinycss2, threadpoolctl, soupsieve, six, setuptools, send2trash, rpds-py, rfc3986-validator, pyzmq, pyyaml, pywinpty, python-json-logger, pyparsing, pygments, pycparser, psutil, prometheus-client, platformdirs, pillow, parso, pandocfilters, packaging, numpy, nest-asyncio, mistune, MarkupSafe, lark, kiwisolver, jupyterlab-pygments, jsonpointer, json5, joblib, idna, h11, fqdn, fonttools, executing, defusedxml, decorator, debugpy, cycler, comm, colorama, charset_normalizer, certifi, bleach, babel, attrs, async-lru, asttokens, terminado, stack_data, scipy, rfc3987-syntax, rfc3339-validator, requests, referencing, python-dateutil, prompt_toolkit, matplotlib-inline, jupyter-core, jinja2, jedi, ipython-pygments-lexers, httpcore, contourpy, cffi, beautifulsoup4, anyio, scikit-learn, pandas, matplotlib, jupyter-server-terminals, jupyter-client, jsonschema-specifications, ipython, httpx, arrow, argon2-cffi-bindings, jsonschema, isoduration, ipykernel, argon2-cffi, nbformat, nbclient, jupyter-events, nbconvert, jupyter-server, notebook-shim, jupyterlab-server, jupyter-lsp, jupyterlab
+Successfully installed MarkupSafe-3.0.3 anyio-4.13.0 argon2-cffi-25.1.0 argon2-cffi-bindings-25.1.0 arrow-1.4.0 asttokens-3.0.1 async-lru-2.3.0 attrs-26.1.0 babel-2.18.0 beautifulsoup4-4.14.3 bleach-6.3.0 certifi-2026.2.25 cffi-2.0.0 charset_normalizer-3.4.7 colorama-0.4.6 comm-0.2.3 contourpy-1.3.3 cycler-0.12.1 debugpy-1.8.20 decorator-5.2.1 defusedxml-0.7.1 executing-2.2.1 fastjsonschema-2.21.2 fonttools-4.62.1 fqdn-1.5.1 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.11 ipykernel-7.2.0 ipython-9.12.0 ipython-pygments-lexers-1.1.1 isoduration-20.11.0 jedi-0.19.2 jinja2-3.1.6 joblib-1.5.3 json5-0.14.0 jsonpointer-3.1.1 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 jupyter-client-8.8.0 jupyter-core-5.9.1 jupyter-events-0.12.0 jupyter-lsp-2.3.1 jupyter-server-2.17.0 jupyter-server-terminals-0.5.4 jupyterlab-4.5.6 jupyterlab-pygments-0.3.0 jupyterlab-server-2.28.0 kiwisolver-1.5.0 lark-1.3.1 matplotlib-3.10.8 matplotlib-inline-0.2.1 mistune-3.2.0 nbclient-0.10.4 nbconvert-7.17.1 nbformat-5.10.4 nest-asyncio-1.6.0 notebook-shim-0.2.4 numpy-2.4.4 packaging-26.1 pandas-3.0.2 pandocfilters-1.5.1 parso-0.8.6 pillow-12.2.0 platformdirs-4.9.6 prometheus-client-0.25.0 prompt_toolkit-3.0.52 psutil-7.2.2 pure-eval-0.2.3 pycparser-3.0 pygments-2.20.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 python-json-logger-4.1.0 pywinpty-3.0.3 pyyaml-6.0.3 pyzmq-27.1.0 referencing-0.37.0 requests-2.33.1 rfc3339-validator-0.1.4 rfc3986-validator-0.1.1 rfc3987-syntax-1.1.0 rpds-py-0.30.0 scikit-learn-1.8.0 scipy-1.17.1 send2trash-2.1.0 setuptools-82.0.1 six-1.17.0 soupsieve-2.8.3 stack_data-0.6.3 terminado-0.18.1 threadpoolctl-3.6.0 tinycss2-1.4.0 tornado-6.5.5 traitlets-5.14.3 typing-extensions-4.15.0 tzdata-2026.1 uri-template-1.3.0 urllib3-2.6.3 wcwidth-0.6.0 webcolors-25.10.0 webencodings-0.5.1 websocket-client-1.9.0
+(rta_env) PS C:\Users\barto> jupyter lab
+[I 2026-04-17 10:21:04.424 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2026-04-17 10:21:04.497 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2026-04-17 10:21:04.559 ServerApp] jupyterlab | extension was successfully linked.
+[I 2026-04-17 10:21:27.239 ServerApp] notebook_shim | extension was successfully linked.
+[I 2026-04-17 10:21:28.118 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2026-04-17 10:21:28.139 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2026-04-17 10:21:28.144 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2026-04-17 10:21:28.170 LabApp] JupyterLab extension loaded from C:\Users\barto\rta_env\Lib\site-packages\jupyterlab
+[I 2026-04-17 10:21:28.170 LabApp] JupyterLab application directory is C:\Users\barto\rta_env\share\jupyter\lab
+[I 2026-04-17 10:21:28.174 LabApp] Extension Manager is 'pypi'.
+[I 2026-04-17 10:21:32.136 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2026-04-17 10:21:32.146 ServerApp] Serving notebooks from local directory: C:\Users\barto
+[I 2026-04-17 10:21:32.147 ServerApp] Jupyter Server 2.17.0 is running at:
+[I 2026-04-17 10:21:32.149 ServerApp] http://localhost:8888/lab?token=68c82a9c6acb5993ef1ef9b0069c0f04fa769a42d3a8a0e8
+[I 2026-04-17 10:21:32.149 ServerApp]     http://127.0.0.1:8888/lab?token=68c82a9c6acb5993ef1ef9b0069c0f04fa769a42d3a8a0e8
+[I 2026-04-17 10:21:32.150 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2026-04-17 10:21:32.622 ServerApp]
+
+    To access the server, open this file in a browser:
+        file:///C:/Users/barto/AppData/Roaming/jupyter/runtime/jpserver-32976-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/lab?token=68c82a9c6acb5993ef1ef9b0069c0f04fa769a42d3a8a0e8
+        http://127.0.0.1:8888/lab?token=68c82a9c6acb5993ef1ef9b0069c0f04fa769a42d3a8a0e8
+[I 2026-04-17 10:21:33.923 ServerApp] Skipped non-installed server(s): basedpyright, bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyrefly, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 2026-04-17 10:21:43.726 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2026-04-17 10:22:21.225 ServerApp] Creating new notebook in
+[I 2026-04-17 10:22:29.212 ServerApp] Kernel started: b8b35a4b-5c75-45bf-bb6c-3e24fd8e913f
+[I 2026-04-17 10:22:52.106 ServerApp] Adapting from protocol version 5.3 (kernel b8b35a4b-5c75-45bf-bb6c-3e24fd8e913f) to 5.4 (client).
+[I 2026-04-17 10:22:52.108 ServerApp] Adapting from protocol version 5.3 (kernel b8b35a4b-5c75-45bf-bb6c-3e24fd8e913f) to 5.4 (client).
+[I 2026-04-17 10:22:52.116 ServerApp] Connecting to kernel b8b35a4b-5c75-45bf-bb6c-3e24fd8e913f.
+[I 2026-04-17 10:22:52.227 ServerApp] Connecting to kernel b8b35a4b-5c75-45bf-bb6c-3e24fd8e913f.
+[W 2026-04-17 10:22:52.351 ServerApp] The websocket_ping_timeout (90000) cannot be longer than the websocket_ping_interval (30000).
+    Setting websocket_ping_timeout=30000
+[I 2026-04-17 10:22:52.382 ServerApp] Adapting from protocol version 5.3 (kernel b8b35a4b-5c75-45bf-bb6c-3e24fd8e913f) to 5.4 (client).
+[I 2026-04-17 10:22:52.388 ServerApp] Connecting to kernel b8b35a4b-5c75-45bf-bb6c-3e24fd8e913f.
+[W 2026-04-17 10:22:52.758 ServerApp] Got events for closed stream <zmq.eventloop.zmqstream.ZMQStream object at 0x000001E096BFB4D0>
+[I 2026-04-17 10:23:17.321 ServerApp] Kernel started: e715db2e-d423-4a47-a631-bacc7e59be3e
+[I 2026-04-17 10:23:32.560 ServerApp] Adapting from protocol version 5.3 (kernel e715db2e-d423-4a47-a631-bacc7e59be3e) to 5.4 (client).
+[I 2026-04-17 10:23:32.564 ServerApp] Connecting to kernel e715db2e-d423-4a47-a631-bacc7e59be3e.
+[I 2026-04-17 10:24:28.014 ServerApp] Saving file at /Untitled1.ipynb
+[I 2026-04-17 10:27:37.624 ServerApp] Interrupted...
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+(rta_env) PS C:\Users\barto> git config --global user.name "Bartek Swiatek"
+(rta_env) PS C:\Users\barto> git config --global user.email "swiatekbrt@gmail.com"
+(rta_env) PS C:\Users\barto> cd ~
+(rta_env) PS C:\Users\barto> git clone https://github.com/swiatekbrt/RTA_BS.git
+Cloning into 'RTA_BS'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+(rta_env) PS C:\Users\barto> cd RTA_BS
+(rta_env) PS C:\Users\barto\RTA_BS> echo "# Analiza danych w czasie rzeczywistym" > README.md
+(rta_env) PS C:\Users\barto\RTA_BS> git add .
+(rta_env) PS C:\Users\barto\RTA_BS> git commit -m "Pierwszy commit"
+[main 0fc782f] Pierwszy commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+(rta_env) PS C:\Users\barto\RTA_BS> git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 311 bytes | 103.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/swiatekbrt/RTA_BS.git
+   8894f94..0fc782f  main -> main
+(rta_env) PS C:\Users\barto\RTA_BS> docker compose version
+Docker Compose version v5.1.1
+(rta_env) PS C:\Users\barto\RTA_BS> docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+4f55086f7dd0: Pull complete
+d5e71e642bf5: Download complete
+Digest: sha256:f9078146db2e05e794366b1bfe584a14ea6317f44027d10ef7dad65279026885
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+(rta_env) PS C:\Users\barto\RTA_BS> cd ~
+(rta_env) PS C:\Users\barto> git clone -b 2026Redis https://github.com/sebkaz/jupyterlab-project.git
+Cloning into 'jupyterlab-project'...
+remote: Enumerating objects: 221, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 221 (delta 1), reused 3 (delta 0), pack-reused 215 (from 1)
+Receiving objects: 100% (221/221), 36.30 KiB | 1.73 MiB/s, done.
+Resolving deltas: 100% (122/122), done.
+(rta_env) PS C:\Users\barto> cd jupyterlab-project
+(rta_env) PS C:\Users\barto\jupyterlab-project> docker compose up -d
+[+] up 27/27
+ ✔ Image redis:7.2-alpine            Pulled                                                     22.4ss
+ ✔ Image confluentinc/cp-kafka:7.8.0 Pulled                                                     136.9s
+#1 [internal] load local bake definitions
+#1 reading from stdin 551B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 30B 0.0s
+#2 transferring dockerfile: 1.50kB 0.0s done
+#2 DONE 0.2s
+
+#3 [internal] load metadata for quay.io/jupyter/pyspark-notebook:python-3.11
+#3 DONE 2.6s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.1s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 resolve quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83 0.1s done
+#5 DONE 4.3s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 sha256:2fd117805b28279ad137b0fd97f3abb1219623acd420003c866c93d7aa6201f0 0B / 584B 0.2s
+#5 sha256:07d32d90b904a5c581fb6f79933647cd1fd095fed242ffcd5a1c95de738c047c 0B / 576B 0.2s
+#5 sha256:92e3e561f7b6994aad5daa0174b89a611e3ef376b5d28c072770c9bf00f00820 0B / 23.87MB 0.2s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 0B / 543.67MB 0.2s
+#5 sha256:2fd117805b28279ad137b0fd97f3abb1219623acd420003c866c93d7aa6201f0 584B / 584B 1.1s
+#5 sha256:2fd117805b28279ad137b0fd97f3abb1219623acd420003c866c93d7aa6201f0 584B / 584B 1.1s done
+#5 sha256:b09350ccdb6ec3285169c0c394b6b4a9924df642db07948f13e33b3085049f94 0B / 1.72kB 0.2s
+#5 sha256:07d32d90b904a5c581fb6f79933647cd1fd095fed242ffcd5a1c95de738c047c 576B / 576B 1.3s done
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 0B / 70.10MB 0.2s
+#5 sha256:b09350ccdb6ec3285169c0c394b6b4a9924df642db07948f13e33b3085049f94 1.72kB / 1.72kB 1.0s done
+#5 sha256:3160321187d407a30442f1da785d36120764326088794039b55b92705f93bd8c 0B / 11.06kB 0.2s
+#5 sha256:92e3e561f7b6994aad5daa0174b89a611e3ef376b5d28c072770c9bf00f00820 2.10MB / 23.87MB 2.9s
+#5 sha256:3160321187d407a30442f1da785d36120764326088794039b55b92705f93bd8c 11.06kB / 11.06kB 1.1s done
+#5 sha256:40c9a7ec70144f882377a3eafb59f95a34c84856e568ec53051a39e427a85e3a 0B / 597.21kB 0.2s
+#5 sha256:92e3e561f7b6994aad5daa0174b89a611e3ef376b5d28c072770c9bf00f00820 3.42MB / 23.87MB 5.1s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 2.10MB / 543.67MB 5.4s
+#5 sha256:40c9a7ec70144f882377a3eafb59f95a34c84856e568ec53051a39e427a85e3a 597.21kB / 597.21kB 2.3s
+#5 sha256:40c9a7ec70144f882377a3eafb59f95a34c84856e568ec53051a39e427a85e3a 597.21kB / 597.21kB 2.3s done
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 0B / 402.02MB 0.2s
+#5 sha256:92e3e561f7b6994aad5daa0174b89a611e3ef376b5d28c072770c9bf00f00820 5.24MB / 23.87MB 6.6s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 3.15MB / 70.10MB 5.4s
+#5 sha256:92e3e561f7b6994aad5daa0174b89a611e3ef376b5d28c072770c9bf00f00820 7.34MB / 23.87MB 8.0s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 7.34MB / 70.10MB 8.3s
+#5 sha256:92e3e561f7b6994aad5daa0174b89a611e3ef376b5d28c072770c9bf00f00820 9.44MB / 23.87MB 10.1s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 8.39MB / 543.67MB 10.5s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 2.10MB / 402.02MB 5.4s
+#5 sha256:92e3e561f7b6994aad5daa0174b89a611e3ef376b5d28c072770c9bf00f00820 11.38MB / 23.87MB 13.7s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 11.53MB / 70.10MB 12.8s
+#5 sha256:92e3e561f7b6994aad5daa0174b89a611e3ef376b5d28c072770c9bf00f00820 12.58MB / 23.87MB 14.6s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 14.68MB / 543.67MB 15.6s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 5.24MB / 402.02MB 10.5s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 15.73MB / 70.10MB 16.7s
+#5 sha256:92e3e561f7b6994aad5daa0174b89a611e3ef376b5d28c072770c9bf00f00820 14.68MB / 23.87MB 18.0s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 18.87MB / 543.67MB 20.9s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 7.34MB / 402.02MB 15.9s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 19.92MB / 70.10MB 21.2s
+#5 sha256:92e3e561f7b6994aad5daa0174b89a611e3ef376b5d28c072770c9bf00f00820 15.73MB / 23.87MB 23.4s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 22.02MB / 543.67MB 26.1s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 7.34MB / 402.02MB 21.0s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 20.97MB / 70.10MB 26.2s
+#5 sha256:92e3e561f7b6994aad5daa0174b89a611e3ef376b5d28c072770c9bf00f00820 16.78MB / 23.87MB 28.8s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 27.26MB / 543.67MB 31.2s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 25.17MB / 70.10MB 30.6s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 11.53MB / 402.02MB 26.2s
+#5 sha256:92e3e561f7b6994aad5daa0174b89a611e3ef376b5d28c072770c9bf00f00820 18.87MB / 23.87MB 32.7s
+#5 sha256:92e3e561f7b6994aad5daa0174b89a611e3ef376b5d28c072770c9bf00f00820 20.97MB / 23.87MB 33.9s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 29.36MB / 70.10MB 33.1s
+#5 sha256:92e3e561f7b6994aad5daa0174b89a611e3ef376b5d28c072770c9bf00f00820 23.07MB / 23.87MB 36.2s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 34.60MB / 543.67MB 36.3s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 33.06MB / 70.10MB 35.7s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 17.40MB / 402.02MB 31.3s
+#5 sha256:92e3e561f7b6994aad5daa0174b89a611e3ef376b5d28c072770c9bf00f00820 23.87MB / 23.87MB 37.1s done
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 0B / 312.58MB 0.2s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 36.70MB / 70.10MB 37.8s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 40.89MB / 543.67MB 41.4s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 40.89MB / 70.10MB 41.1s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 22.02MB / 402.02MB 36.6s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 2.10MB / 312.58MB 5.3s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 45.09MB / 70.10MB 44.8s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 46.14MB / 543.67MB 46.5s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 26.21MB / 402.02MB 41.7s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 5.24MB / 312.58MB 10.5s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 49.28MB / 70.10MB 48.7s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 52.43MB / 543.67MB 51.6s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 29.36MB / 402.02MB 46.8s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 8.39MB / 312.58MB 15.6s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 53.48MB / 70.10MB 52.5s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 57.67MB / 543.67MB 56.7s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 57.67MB / 70.10MB 55.9s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 31.46MB / 402.02MB 51.9s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 12.58MB / 312.58MB 20.7s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 61.87MB / 70.10MB 59.8s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 63.96MB / 543.67MB 62.3s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 33.55MB / 402.02MB 57.1s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 16.78MB / 312.58MB 25.8s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 66.06MB / 70.10MB 63.4s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 69.21MB / 543.67MB 67.3s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 70.10MB / 70.10MB 66.9s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 38.80MB / 402.02MB 62.5s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 18.87MB / 312.58MB 30.9s
+#5 sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 70.10MB / 70.10MB 67.2s done
+#5 sha256:0c795ce9c59e6ac16fd08cb6192645e75840dba49d141e7f6833bba587a968b7 0B / 2.83kB 0.2s
+#5 sha256:0c795ce9c59e6ac16fd08cb6192645e75840dba49d141e7f6833bba587a968b7 2.83kB / 2.83kB 0.9s done
+#5 sha256:3936eba08eb5dd041391bd37d3a023f6418039f1e489d0d991444bebf59da183 0B / 435B 0.3s
+#5 sha256:3936eba08eb5dd041391bd37d3a023f6418039f1e489d0d991444bebf59da183 435B / 435B 0.4s done
+#5 sha256:99563ff7137e0783ea8310c89497a57694024a6cc85cd71b353904c1b619397a 0B / 1.38kB 0.3s
+#5 sha256:99563ff7137e0783ea8310c89497a57694024a6cc85cd71b353904c1b619397a 1.38kB / 1.38kB 1.2s done
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 0B / 243.90MB 0.2s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 77.59MB / 543.67MB 72.6s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 44.04MB / 402.02MB 67.6s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 24.12MB / 312.58MB 36.0s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 4.19MB / 243.90MB 5.3s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 83.89MB / 543.67MB 77.7s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 47.19MB / 402.02MB 73.2s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 28.31MB / 312.58MB 41.5s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 10.49MB / 243.90MB 11.1s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 89.13MB / 543.67MB 82.8s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 31.46MB / 312.58MB 46.7s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 50.33MB / 402.02MB 78.4s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 18.87MB / 243.90MB 16.2s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 96.47MB / 543.67MB 87.9s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 36.70MB / 312.58MB 51.7s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 54.53MB / 402.02MB 83.5s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 26.21MB / 243.90MB 21.3s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 103.81MB / 543.67MB 93.0s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 56.62MB / 402.02MB 89.1s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 41.94MB / 312.58MB 57.6s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 31.46MB / 243.90MB 26.4s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 110.10MB / 543.67MB 98.2s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 59.77MB / 402.02MB 94.3s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 46.14MB / 312.58MB 62.7s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 38.80MB / 243.90MB 31.9s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 116.39MB / 543.67MB 103.5s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 51.38MB / 312.58MB 67.8s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 61.87MB / 402.02MB 99.4s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 46.14MB / 243.90MB 37.1s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 123.73MB / 543.67MB 108.6s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 67.11MB / 402.02MB 104.7s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 54.53MB / 312.58MB 73.0s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 50.33MB / 243.90MB 42.1s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 130.02MB / 543.67MB 114.1s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 56.62MB / 312.58MB 78.1s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 72.35MB / 402.02MB 109.8s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 57.67MB / 243.90MB 47.8s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 136.31MB / 543.67MB 119.4s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 76.55MB / 402.02MB 115.3s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 57.67MB / 312.58MB 83.8s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 61.87MB / 243.90MB 53.2s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 140.51MB / 543.67MB 124.5s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 80.72MB / 402.02MB 120.4s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 60.82MB / 312.58MB 89.0s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 67.11MB / 243.90MB 58.3s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 145.75MB / 543.67MB 130.0s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 82.84MB / 402.02MB 125.5s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 63.96MB / 312.58MB 94.0s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 73.40MB / 243.90MB 63.4s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 153.09MB / 543.67MB 135.1s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 85.98MB / 402.02MB 130.8s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 68.16MB / 312.58MB 99.1s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 79.69MB / 243.90MB 68.7s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 159.38MB / 543.67MB 140.2s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 90.18MB / 402.02MB 136.5s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 72.35MB / 312.58MB 105.0s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 166.72MB / 543.67MB 145.3s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 87.03MB / 243.90MB 74.2s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 95.42MB / 402.02MB 141.6s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 74.45MB / 312.58MB 110.3s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 173.02MB / 543.67MB 150.4s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 93.32MB / 243.90MB 79.3s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 98.57MB / 402.02MB 146.8s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 77.59MB / 312.58MB 115.3s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 178.26MB / 543.67MB 156.0s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 98.57MB / 243.90MB 84.9s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 99.61MB / 402.02MB 151.9s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 81.79MB / 312.58MB 120.4s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 182.45MB / 543.67MB 161.1s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 103.81MB / 243.90MB 90.0s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 101.71MB / 402.02MB 157.0s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 87.03MB / 312.58MB 125.7s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 188.74MB / 543.67MB 166.2s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 110.10MB / 243.90MB 95.1s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 104.86MB / 402.02MB 162.1s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 91.23MB / 312.58MB 131.2s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 193.99MB / 543.67MB 171.3s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 114.29MB / 243.90MB 100.2s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 108.00MB / 402.02MB 167.2s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 93.32MB / 312.58MB 136.5s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 197.13MB / 543.67MB 176.5s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 118.49MB / 243.90MB 105.3s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 111.15MB / 402.02MB 172.8s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 94.37MB / 312.58MB 141.7s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 203.42MB / 543.67MB 182.1s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 124.78MB / 243.90MB 111.0s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 116.39MB / 402.02MB 177.9s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 96.47MB / 312.58MB 147.3s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 209.72MB / 543.67MB 187.8s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 130.02MB / 243.90MB 116.7s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 118.49MB / 402.02MB 183.0s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 100.66MB / 312.58MB 153.2s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 214.96MB / 543.67MB 192.9s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 136.31MB / 243.90MB 121.8s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 121.65MB / 402.02MB 188.1s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 102.76MB / 312.58MB 158.5s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 221.25MB / 543.67MB 198.1s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 142.61MB / 243.90MB 127.0s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 127.93MB / 402.02MB 193.6s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 106.95MB / 312.58MB 163.8s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 227.54MB / 543.67MB 203.5s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 148.90MB / 243.90MB 132.4s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 132.12MB / 402.02MB 198.7s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 110.10MB / 312.58MB 169.0s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 233.83MB / 543.67MB 208.8s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 155.19MB / 243.90MB 137.7s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 135.27MB / 402.02MB 203.8s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 112.20MB / 312.58MB 174.3s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 239.08MB / 543.67MB 213.9s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 160.43MB / 243.90MB 142.8s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 138.41MB / 402.02MB 208.9s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 115.34MB / 312.58MB 179.4s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 244.32MB / 543.67MB 219.7s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 140.51MB / 402.02MB 214.0s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 164.63MB / 243.90MB 148.5s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 118.49MB / 312.58MB 184.6s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 250.61MB / 543.67MB 225.6s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 144.70MB / 402.02MB 219.9s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 171.97MB / 243.90MB 154.5s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 122.68MB / 312.58MB 189.7s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 146.80MB / 402.02MB 225.0s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 255.85MB / 543.67MB 230.8s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 177.21MB / 243.90MB 159.7s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 124.78MB / 312.58MB 195.0s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 149.95MB / 402.02MB 230.2s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 261.10MB / 543.67MB 235.9s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 183.50MB / 243.90MB 164.8s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 130.02MB / 312.58MB 200.1s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 268.44MB / 543.67MB 241.0s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 152.04MB / 402.02MB 235.3s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 189.79MB / 243.90MB 169.9s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 134.22MB / 312.58MB 205.3s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 273.68MB / 543.67MB 246.3s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 155.19MB / 402.02MB 240.6s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 195.04MB / 243.90MB 175.0s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 137.36MB / 312.58MB 211.2s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 277.87MB / 543.67MB 251.4s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 158.33MB / 402.02MB 245.7s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 199.23MB / 243.90MB 180.1s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 139.46MB / 312.58MB 216.3s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 161.48MB / 402.02MB 250.8s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 207.62MB / 243.90MB 185.2s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 285.21MB / 543.67MB 256.5s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 145.75MB / 312.58MB 221.5s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 169.87MB / 402.02MB 255.9s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 218.10MB / 243.90MB 190.3s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 295.70MB / 543.67MB 261.6s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 155.19MB / 312.58MB 226.6s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 176.16MB / 402.02MB 261.0s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 228.59MB / 243.90MB 195.4s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 306.18MB / 543.67MB 266.7s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 161.48MB / 312.58MB 231.7s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 236.98MB / 243.90MB 200.5s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 182.45MB / 402.02MB 266.1s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 314.57MB / 543.67MB 271.9s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 166.72MB / 312.58MB 236.8s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 322.96MB / 543.67MB 277.2s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 187.70MB / 402.02MB 271.5s
+#5 sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 243.90MB / 243.90MB 205.7s done
+#5 sha256:6766c4c0cc4f26de2b02b81cae7dbbfa104ff958683c950ef67d7f36171dae6b 0B / 1.67kB 0.2s
+#5 sha256:6766c4c0cc4f26de2b02b81cae7dbbfa104ff958683c950ef67d7f36171dae6b 1.67kB / 1.67kB 1.2s done
+#5 sha256:890640a944c45f2bd1fa2626146fd79d316d29cfcefa80a3a52b1bffccbc4ad1 0B / 1.66kB 0.2s
+#5 sha256:890640a944c45f2bd1fa2626146fd79d316d29cfcefa80a3a52b1bffccbc4ad1 1.66kB / 1.66kB 0.5s done
+#5 sha256:6ce36f62b6d61e001269abc5e49d9f9042b4aa7e06bf506bb399b646b4de7fb1 0B / 1.16kB 0.2s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 171.97MB / 312.58MB 241.9s
+#5 sha256:6ce36f62b6d61e001269abc5e49d9f9042b4aa7e06bf506bb399b646b4de7fb1 1.16kB / 1.16kB 0.6s done
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 0B / 112.08MB 0.2s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 328.20MB / 543.67MB 283.0s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 190.84MB / 402.02MB 277.5s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 174.06MB / 312.58MB 247.2s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 3.15MB / 112.08MB 5.4s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 335.54MB / 543.67MB 288.1s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 195.04MB / 402.02MB 282.6s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 9.44MB / 112.08MB 8.9s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 180.36MB / 312.58MB 252.4s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 15.73MB / 112.08MB 11.9s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 347.08MB / 543.67MB 293.2s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 202.38MB / 402.02MB 287.7s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 22.02MB / 112.08MB 14.3s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 191.89MB / 312.58MB 257.5s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 353.37MB / 543.67MB 298.3s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 204.47MB / 402.02MB 292.8s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 26.21MB / 112.08MB 19.4s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 193.99MB / 312.58MB 262.6s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 32.51MB / 112.08MB 23.7s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 359.66MB / 543.67MB 303.4s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 208.67MB / 402.02MB 297.9s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 199.23MB / 312.58MB 267.9s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 37.75MB / 112.08MB 28.8s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 365.95MB / 543.67MB 308.8s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 212.86MB / 402.02MB 303.3s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 203.42MB / 312.58MB 273.1s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 44.04MB / 112.08MB 33.6s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 373.29MB / 543.67MB 313.9s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 217.06MB / 402.02MB 308.5s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 206.57MB / 312.58MB 278.8s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 49.28MB / 112.08MB 38.7s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 378.54MB / 543.67MB 319.3s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 220.20MB / 402.02MB 313.8s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 210.76MB / 312.58MB 283.9s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 54.53MB / 112.08MB 43.8s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 384.83MB / 543.67MB 324.7s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 222.30MB / 402.02MB 319.0s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 212.86MB / 312.58MB 289.0s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 60.82MB / 112.08MB 48.9s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 390.07MB / 543.67MB 330.1s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 226.49MB / 402.02MB 324.4s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 214.96MB / 312.58MB 294.1s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 66.06MB / 112.08MB 54.3s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 396.36MB / 543.67MB 335.2s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 229.64MB / 402.02MB 329.6s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 219.15MB / 312.58MB 299.2s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 72.35MB / 112.08MB 59.1s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 401.60MB / 543.67MB 340.7s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 232.78MB / 402.02MB 335.2s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 223.35MB / 312.58MB 304.3s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 77.59MB / 112.08MB 64.5s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 408.94MB / 543.67MB 346.0s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 236.98MB / 402.02MB 340.3s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 225.44MB / 312.58MB 310.0s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 83.89MB / 112.08MB 68.7s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 241.17MB / 402.02MB 345.4s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 415.24MB / 543.67MB 351.2s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 228.59MB / 312.58MB 315.4s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 89.13MB / 112.08MB 73.8s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 245.37MB / 402.02MB 350.5s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 420.48MB / 543.67MB 356.5s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 230.69MB / 312.58MB 320.5s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 95.42MB / 112.08MB 78.1s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 250.61MB / 402.02MB 355.6s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 101.71MB / 112.08MB 81.9s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 428.87MB / 543.67MB 361.6s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 236.98MB / 312.58MB 325.6s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 108.00MB / 112.08MB 85.0s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 255.85MB / 402.02MB 360.7s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 438.30MB / 543.67MB 366.7s
+#5 sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 112.08MB / 112.08MB 87.5s done
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 0B / 41.18MB 0.2s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 243.27MB / 312.58MB 330.7s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 2.10MB / 41.18MB 2.0s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 4.19MB / 41.18MB 3.3s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 6.29MB / 41.18MB 4.5s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 261.10MB / 402.02MB 365.8s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 446.69MB / 543.67MB 371.8s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 8.39MB / 41.18MB 5.7s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 251.66MB / 312.58MB 335.8s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 10.49MB / 41.18MB 6.9s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 12.58MB / 41.18MB 8.1s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 14.68MB / 41.18MB 9.2s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 265.29MB / 402.02MB 370.9s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 457.18MB / 543.67MB 377.2s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 16.78MB / 41.18MB 10.5s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 259.00MB / 312.58MB 340.9s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 18.87MB / 41.18MB 11.7s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 20.97MB / 41.18MB 12.8s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 269.48MB / 402.02MB 376.1s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 23.07MB / 41.18MB 14.9s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 464.52MB / 543.67MB 382.4s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 262.14MB / 312.58MB 346.0s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 25.17MB / 41.18MB 16.4s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 27.26MB / 41.18MB 17.4s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 29.36MB / 41.18MB 18.5s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 31.46MB / 41.18MB 19.3s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 275.78MB / 402.02MB 381.2s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 33.55MB / 41.18MB 20.3s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 473.96MB / 543.67MB 387.5s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 269.48MB / 312.58MB 351.2s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 35.65MB / 41.18MB 21.6s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 37.75MB / 41.18MB 23.6s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 39.85MB / 41.18MB 24.9s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 281.02MB / 402.02MB 386.3s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 481.30MB / 543.67MB 392.6s
+#5 sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 41.18MB / 41.18MB 25.9s done
+#5 sha256:df5f7258a16504abe8694b644148a612d7ad6e4bcf96e456498ceca83b261c4d 477B / 477B 0.4s done
+#5 sha256:95ffe5c53768f3788ffc0e8380af9203aa31ad18c4f8ee84783444822ac5ef72 0B / 179B 0.2s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 272.63MB / 312.58MB 356.3s
+#5 sha256:95ffe5c53768f3788ffc0e8380af9203aa31ad18c4f8ee84783444822ac5ef72 179B / 179B 0.4s done
+#5 sha256:403ed4d063a8b171d399c77daa91f5a15e50dd772d71bf958bdd0ddc7623eb09 0B / 4.59kB 0.2s
+#5 sha256:403ed4d063a8b171d399c77daa91f5a15e50dd772d71bf958bdd0ddc7623eb09 4.59kB / 4.59kB 0.4s done
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 0B / 103.90MB 0.2s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 286.26MB / 402.02MB 391.4s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 487.59MB / 543.67MB 397.7s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 275.78MB / 312.58MB 361.9s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 5.24MB / 103.90MB 5.4s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 287.31MB / 402.02MB 396.5s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 493.88MB / 543.67MB 402.8s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 10.49MB / 103.90MB 9.6s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 281.02MB / 312.58MB 367.0s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 291.50MB / 402.02MB 401.8s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 500.17MB / 543.67MB 407.9s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 15.73MB / 103.90MB 13.8s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 285.21MB / 312.58MB 372.2s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 20.97MB / 103.90MB 17.9s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 294.65MB / 402.02MB 406.9s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 506.46MB / 543.67MB 413.2s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 289.41MB / 312.58MB 377.3s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 26.21MB / 103.90MB 21.5s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 296.75MB / 402.02MB 412.0s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 512.75MB / 543.67MB 418.3s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 31.46MB / 103.90MB 25.3s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 294.65MB / 312.58MB 382.4s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 300.94MB / 402.02MB 417.1s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 521.14MB / 543.67MB 424.1s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 36.70MB / 103.90MB 30.0s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 297.80MB / 312.58MB 387.7s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 304.09MB / 402.02MB 422.5s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 526.39MB / 543.67MB 429.2s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 41.94MB / 103.90MB 35.1s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 303.04MB / 312.58MB 392.8s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 47.19MB / 103.90MB 38.2s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 306.18MB / 402.02MB 427.6s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 532.68MB / 543.67MB 434.3s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 307.23MB / 312.58MB 397.9s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 52.43MB / 103.90MB 41.9s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 311.43MB / 402.02MB 432.8s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 540.02MB / 543.67MB 439.4s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 57.67MB / 103.90MB 45.3s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 310.38MB / 312.58MB 403.0s
+#5 sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 543.67MB / 543.67MB 441.9s done
+#5 sha256:4b70b3810403ea58438630f2605da0cbd55b618b881846062176db0b8706d27f 0B / 274B 0.3s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 62.91MB / 103.90MB 48.4s
+#5 sha256:4b70b3810403ea58438630f2605da0cbd55b618b881846062176db0b8706d27f 274B / 274B 0.9s
+#5 sha256:4b70b3810403ea58438630f2605da0cbd55b618b881846062176db0b8706d27f 274B / 274B 1.2s done
+#5 sha256:be1c6f115c5117a230a53793c79e793efdff5058eca035c79f55ab92c7101fc4 0B / 4.94kB 0.2s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 317.72MB / 402.02MB 437.9s
+#5 sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 312.58MB / 312.58MB 406.3s done
+#5 sha256:4d0342fcac6c5b976c47f0c53712ed5ce1ee93e0f7be8c6afeabbd316f79899e 0B / 1.30kB 0.2s
+#5 sha256:be1c6f115c5117a230a53793c79e793efdff5058eca035c79f55ab92c7101fc4 4.94kB / 4.94kB 0.6s
+#5 sha256:4d0342fcac6c5b976c47f0c53712ed5ce1ee93e0f7be8c6afeabbd316f79899e 1.30kB / 1.30kB 0.6s
+#5 sha256:be1c6f115c5117a230a53793c79e793efdff5058eca035c79f55ab92c7101fc4 4.94kB / 4.94kB 0.7s done
+#5 sha256:4d0342fcac6c5b976c47f0c53712ed5ce1ee93e0f7be8c6afeabbd316f79899e 1.30kB / 1.30kB 0.8s done
+#5 sha256:92bc4ae06b0af0340f653ef0e8d43cd88feff9243fd7e959dce613b1defd2cc4 0B / 149B 0.2s
+#5 sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708 0B / 30.61MB 0.2s
+#5 sha256:92bc4ae06b0af0340f653ef0e8d43cd88feff9243fd7e959dce613b1defd2cc4 149B / 149B 0.5s
+#5 sha256:92bc4ae06b0af0340f653ef0e8d43cd88feff9243fd7e959dce613b1defd2cc4 149B / 149B 0.5s done
+#5 sha256:d93fc9dc9d3811d48b98b22cb870de46ecc964a3c7102c9257ccc06c39dcc766 0B / 684B 0.2s
+#5 sha256:d93fc9dc9d3811d48b98b22cb870de46ecc964a3c7102c9257ccc06c39dcc766 684B / 684B 0.5s done
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 68.16MB / 103.90MB 51.4s
+#5 sha256:56f0e7641c5b4144f25cfa362d4320825d9e4f1608a39657142c2bc4fc31172d 0B / 1.91kB 0.1s
+#5 sha256:56f0e7641c5b4144f25cfa362d4320825d9e4f1608a39657142c2bc4fc31172d 1.91kB / 1.91kB 0.3s
+#5 sha256:56f0e7641c5b4144f25cfa362d4320825d9e4f1608a39657142c2bc4fc31172d 1.91kB / 1.91kB 0.6s done
+#5 sha256:abe94e508eaa2c62ae52abbd2298b54a09e033fb2c571ea9b9a61bf5f19d1d6f 0B / 10.14MB 0.2s
+#5 sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708 2.10MB / 30.61MB 2.8s
+#5 sha256:abe94e508eaa2c62ae52abbd2298b54a09e033fb2c571ea9b9a61bf5f19d1d6f 1.05MB / 10.14MB 1.4s
+#5 sha256:abe94e508eaa2c62ae52abbd2298b54a09e033fb2c571ea9b9a61bf5f19d1d6f 2.10MB / 10.14MB 1.8s
+#5 sha256:abe94e508eaa2c62ae52abbd2298b54a09e033fb2c571ea9b9a61bf5f19d1d6f 3.15MB / 10.14MB 2.3s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 324.01MB / 402.02MB 443.0s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 73.40MB / 103.90MB 54.6s
+#5 sha256:abe94e508eaa2c62ae52abbd2298b54a09e033fb2c571ea9b9a61bf5f19d1d6f 4.19MB / 10.14MB 3.0s
+#5 sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708 4.19MB / 30.61MB 5.5s
+#5 sha256:abe94e508eaa2c62ae52abbd2298b54a09e033fb2c571ea9b9a61bf5f19d1d6f 5.24MB / 10.14MB 3.6s
+#5 sha256:abe94e508eaa2c62ae52abbd2298b54a09e033fb2c571ea9b9a61bf5f19d1d6f 6.29MB / 10.14MB 4.5s
+#5 sha256:abe94e508eaa2c62ae52abbd2298b54a09e033fb2c571ea9b9a61bf5f19d1d6f 7.34MB / 10.14MB 5.6s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 78.64MB / 103.90MB 58.0s
+#5 sha256:abe94e508eaa2c62ae52abbd2298b54a09e033fb2c571ea9b9a61bf5f19d1d6f 8.39MB / 10.14MB 6.0s
+#5 sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708 6.29MB / 30.61MB 8.1s
+#5 sha256:abe94e508eaa2c62ae52abbd2298b54a09e033fb2c571ea9b9a61bf5f19d1d6f 9.44MB / 10.14MB 6.3s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 328.20MB / 402.02MB 448.1s
+#5 sha256:abe94e508eaa2c62ae52abbd2298b54a09e033fb2c571ea9b9a61bf5f19d1d6f 10.14MB / 10.14MB 7.3s done
+#5 sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708 8.39MB / 30.61MB 10.8s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 83.89MB / 103.90MB 61.9s
+#5 sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708 10.49MB / 30.61MB 12.9s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 331.35MB / 402.02MB 453.2s
+#5 sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708 12.58MB / 30.61MB 14.5s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 89.13MB / 103.90MB 65.2s
+#5 sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708 14.68MB / 30.61MB 17.1s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 94.37MB / 103.90MB 68.2s
+#5 sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708 16.78MB / 30.61MB 19.2s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 337.64MB / 402.02MB 458.3s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 99.61MB / 103.90MB 72.0s
+#5 sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708 18.87MB / 30.61MB 23.1s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 341.84MB / 402.02MB 463.4s
+#5 sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 103.90MB / 103.90MB 75.1s done
+#5 sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708 20.97MB / 30.61MB 25.3s
+#5 sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708 23.07MB / 30.61MB 26.8s
+#5 sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708 25.17MB / 30.61MB 28.6s
+#5 sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708 27.26MB / 30.61MB 29.5s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 349.18MB / 402.02MB 468.5s
+#5 sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708 29.36MB / 30.61MB 30.6s
+#5 sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708 30.61MB / 30.61MB 31.2s done
+#5 extracting sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 358.61MB / 402.02MB 473.6s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 367.00MB / 402.02MB 478.7s
+#5 extracting sha256:802008e7f7617aa11266de164e757a6c8d7bb57ed4c972cf7e9f519dd0a21708 9.0s done
+#5 extracting sha256:abe94e508eaa2c62ae52abbd2298b54a09e033fb2c571ea9b9a61bf5f19d1d6f
+#5 extracting sha256:abe94e508eaa2c62ae52abbd2298b54a09e033fb2c571ea9b9a61bf5f19d1d6f 3.4s done
+#5 extracting sha256:d93fc9dc9d3811d48b98b22cb870de46ecc964a3c7102c9257ccc06c39dcc766 0.1s done
+#5 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0.1s done
+#5 extracting sha256:56f0e7641c5b4144f25cfa362d4320825d9e4f1608a39657142c2bc4fc31172d
+#5 extracting sha256:56f0e7641c5b4144f25cfa362d4320825d9e4f1608a39657142c2bc4fc31172d 0.1s done
+#5 extracting sha256:4d0342fcac6c5b976c47f0c53712ed5ce1ee93e0f7be8c6afeabbd316f79899e 0.1s done
+#5 extracting sha256:be1c6f115c5117a230a53793c79e793efdff5058eca035c79f55ab92c7101fc4
+#5 extracting sha256:be1c6f115c5117a230a53793c79e793efdff5058eca035c79f55ab92c7101fc4 0.2s done
+#5 extracting sha256:92bc4ae06b0af0340f653ef0e8d43cd88feff9243fd7e959dce613b1defd2cc4 0.1s done
+#5 extracting sha256:4b70b3810403ea58438630f2605da0cbd55b618b881846062176db0b8706d27f
+#5 extracting sha256:4b70b3810403ea58438630f2605da0cbd55b618b881846062176db0b8706d27f 0.1s done
+#5 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0.1s done
+#5 extracting sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 376.44MB / 402.02MB 483.8s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 385.88MB / 402.02MB 488.9s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 396.36MB / 402.02MB 494.0s
+#5 sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 402.02MB / 402.02MB 497.2s done
+#5 extracting sha256:239687ec72ccad6a022386643b790df03fc2ec9c62052ec19b9ed5b12280419d 24.6s done
+#5 DONE 518.3s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:403ed4d063a8b171d399c77daa91f5a15e50dd772d71bf958bdd0ddc7623eb09 0.1s done
+#5 extracting sha256:95ffe5c53768f3788ffc0e8380af9203aa31ad18c4f8ee84783444822ac5ef72 0.1s done
+#5 DONE 518.5s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0.1s done
+#5 extracting sha256:df5f7258a16504abe8694b644148a612d7ad6e4bcf96e456498ceca83b261c4d 0.1s done
+#5 DONE 518.6s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b
+#5 extracting sha256:066afbb507fdd7e96d2d160162538ebc20e1ab864242bd7ce21a898b67dac99b 6.8s done
+#5 DONE 525.4s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0.1s done
+#5 extracting sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07
+#5 extracting sha256:2f362bf799ca93bb148725ccb2f8305e4a7e44b501d74f2a5e292144d9959f07 41.8s done
+#5 DONE 567.2s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:6ce36f62b6d61e001269abc5e49d9f9042b4aa7e06bf506bb399b646b4de7fb1 0.1s done
+#5 DONE 567.4s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:890640a944c45f2bd1fa2626146fd79d316d29cfcefa80a3a52b1bffccbc4ad1 0.1s done
+#5 DONE 567.5s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:6766c4c0cc4f26de2b02b81cae7dbbfa104ff958683c950ef67d7f36171dae6b 0.1s done
+#5 DONE 567.6s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0.1s done
+#5 extracting sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8
+#5 extracting sha256:247d483f294e844acc1808a81746719d0bae19b4f433d167c482351560504ff8 56.4s done
+#5 DONE 624.0s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:99563ff7137e0783ea8310c89497a57694024a6cc85cd71b353904c1b619397a 0.1s done
+#5 DONE 624.2s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:3936eba08eb5dd041391bd37d3a023f6418039f1e489d0d991444bebf59da183 0.1s done
+#5 extracting sha256:0c795ce9c59e6ac16fd08cb6192645e75840dba49d141e7f6833bba587a968b7
+#5 extracting sha256:0c795ce9c59e6ac16fd08cb6192645e75840dba49d141e7f6833bba587a968b7 0.1s done
+#5 DONE 624.4s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e
+#5 extracting sha256:0625369b9c812ace4d6fd99aea58c025caa3be3943f9e7064ac6d5436e7f301e 57.8s done
+#5 DONE 682.2s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35
+#5 extracting sha256:62d403370b3e7f97c37d1ae5bcd61a0b1fffadafaeb130ba5f7d9a021d8e1a35 73.7s done
+#5 DONE 755.9s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0.1s done
+#5 DONE 756.0s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:40c9a7ec70144f882377a3eafb59f95a34c84856e568ec53051a39e427a85e3a
+#5 extracting sha256:40c9a7ec70144f882377a3eafb59f95a34c84856e568ec53051a39e427a85e3a 0.2s done
+#5 DONE 756.2s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:3160321187d407a30442f1da785d36120764326088794039b55b92705f93bd8c 0.2s done
+#5 DONE 756.3s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0.1s done
+#5 extracting sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb
+#5 extracting sha256:818e2dd1f6a5f849cd032ab25fcbd0879745541b573b29f102aeb5719c04c8bb 5.9s done
+#5 DONE 762.3s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:b09350ccdb6ec3285169c0c394b6b4a9924df642db07948f13e33b3085049f94 0.1s done
+#5 extracting sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e
+#5 extracting sha256:8d88e3f4f75625088d2a4e30b8bb6f4ab44aa8b796843011546ac8c7df453e7e 19.4s done
+#5 extracting sha256:07d32d90b904a5c581fb6f79933647cd1fd095fed242ffcd5a1c95de738c047c
+#5 extracting sha256:07d32d90b904a5c581fb6f79933647cd1fd095fed242ffcd5a1c95de738c047c 0.1s done
+#5 DONE 781.9s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:2fd117805b28279ad137b0fd97f3abb1219623acd420003c866c93d7aa6201f0
+#5 extracting sha256:2fd117805b28279ad137b0fd97f3abb1219623acd420003c866c93d7aa6201f0 0.3s done
+#5 DONE 782.2s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:92e3e561f7b6994aad5daa0174b89a611e3ef376b5d28c072770c9bf00f00820
+#5 extracting sha256:92e3e561f7b6994aad5daa0174b89a611e3ef376b5d28c072770c9bf00f00820 7.3s done
+#5 DONE 789.5s
+
+#5 [1/5] FROM quay.io/jupyter/pyspark-notebook:python-3.11@sha256:50aaceb4f2f175a213b10c4eceb9f06d6774114750de9a06b074ed6d0fd25e83
+#5 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1
+#5 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0.4s done
+#5 DONE 789.9s
+
+#6 [2/5] RUN apt-get update &&     apt-get install -y --no-install-recommends     curl vim wget git netcat-openbsd graphviz &&     apt-get clean && rm -rf /var/lib/apt/lists/*
+#6 16.47 Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+#6 16.48 Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+#6 16.84 Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+#6 16.88 Get:4 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1507 kB]
+#6 17.05 Get:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+#6 17.27 Get:6 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+#6 17.37 Get:7 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+#6 17.66 Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+#6 17.89 Get:9 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB]
+#6 17.93 Get:10 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [2025 kB]
+#6 18.63 Get:11 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+#6 18.66 Get:12 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3581 kB]
+#6 28.31 Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2402 kB]
+#6 29.33 Get:14 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3752 kB]
+#6 33.19 Get:15 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.4 kB]
+#6 33.27 Get:16 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2156 kB]
+#6 34.54 Get:17 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB]
+#6 34.57 Get:18 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [695 B]
+#6 34.57 Get:19 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [36.1 kB]
+#6 35.07 Fetched 37.8 MB in 31s (1200 kB/s)
+#6 35.07 Reading package lists...
+#6 40.89 Reading package lists...
+#6 47.74 Building dependency tree...
+#6 48.84 Reading state information...
+#6 50.48 wget is already the newest version (1.21.4-1ubuntu4.1).
+#6 50.48 The following additional packages will be installed:
+#6 50.49   git-man libann0 libcdt5 libcgraph6 libcurl3t64-gnutls libcurl4t64 libgpm2
+#6 50.49   libgts-0.7-5t64 libgvc6 libgvpr2 liblab-gamut1 libltdl7 libpathplan4
+#6 50.49   libpython3.12-minimal libpython3.12-stdlib libpython3.12t64 python3.12
+#6 50.49   python3.12-minimal vim-common vim-runtime vim-tiny
+#6 50.51 Suggested packages:
+#6 50.51   gettext-base git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui
+#6 50.51   gitk gitweb git-cvs git-mediawiki git-svn gsfonts graphviz-doc gpm
+#6 50.51   python3.12-venv python3.12-doc binfmt-support ctags vim-doc vim-scripts
+#6 50.51   indent
+#6 50.51 Recommended packages:
+#6 50.51   fonts-liberation2 libgts-bin xxd
+#6 50.99 The following NEW packages will be installed:
+#6 50.99   graphviz libann0 libcdt5 libcgraph6 libgpm2 libgts-0.7-5t64 libgvc6 libgvpr2
+#6 51.00   liblab-gamut1 libltdl7 libpathplan4 libpython3.12t64 netcat-openbsd vim
+#6 51.00   vim-runtime
+#6 51.01 The following packages will be upgraded:
+#6 51.01   curl git git-man libcurl3t64-gnutls libcurl4t64 libpython3.12-minimal
+#6 51.02   libpython3.12-stdlib python3.12 python3.12-minimal vim-common vim-tiny
+#6 51.79 11 upgraded, 15 newly installed, 0 to remove and 150 not upgraded.
+#6 51.79 Need to get 28.1 MB of archives.
+#6 51.79 After this operation, 59.6 MB of additional disk space will be used.
+#6 51.79 Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12 amd64 3.12.3-1ubuntu0.12 [651 kB]
+#6 52.79 Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-stdlib amd64 3.12.3-1ubuntu0.12 [2069 kB]
+#6 53.68 Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12-minimal amd64 3.12.3-1ubuntu0.12 [2334 kB]
+#6 54.80 Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-minimal amd64 3.12.3-1ubuntu0.12 [837 kB]
+#6 55.17 Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 netcat-openbsd amd64 1.226-1ubuntu2 [44.3 kB]
+#6 55.18 Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 vim-tiny amd64 2:9.1.0016-1ubuntu7.11 [805 kB]
+#6 55.51 Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 vim-common all 2:9.1.0016-1ubuntu7.11 [387 kB]
+#6 55.60 Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 libgpm2 amd64 1.20.7-11 [14.1 kB]
+#6 55.60 Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.8 [227 kB]
+#6 55.66 Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.8 [342 kB]
+#6 55.76 Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl3t64-gnutls amd64 8.5.0-2ubuntu10.8 [334 kB]
+#6 55.87 Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB]
+#6 56.32 Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB]
+#6 57.87 Get:14 http://archive.ubuntu.com/ubuntu noble/universe amd64 libann0 amd64 1.1.2+doc-9build1 [25.5 kB]
+#6 57.87 Get:15 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 libcdt5 amd64 2.42.2-9ubuntu0.1 [21.6 kB]
+#6 57.88 Get:16 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 libcgraph6 amd64 2.42.2-9ubuntu0.1 [44.6 kB]
+#6 57.92 Get:17 http://archive.ubuntu.com/ubuntu noble/universe amd64 libgts-0.7-5t64 amd64 0.7.6+darcs121130-5.2build1 [161 kB]
+#6 58.09 Get:18 http://archive.ubuntu.com/ubuntu noble/main amd64 libltdl7 amd64 2.4.7-7build1 [40.3 kB]
+#6 58.12 Get:19 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 libpathplan4 amd64 2.42.2-9ubuntu0.1 [24.0 kB]
+#6 58.14 Get:20 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 libgvc6 amd64 2.42.2-9ubuntu0.1 [716 kB]
+#6 58.39 Get:21 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 libgvpr2 amd64 2.42.2-9ubuntu0.1 [187 kB]
+#6 58.45 Get:22 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 liblab-gamut1 amd64 2.42.2-9ubuntu0.1 [1886 kB]
+#6 59.21 Get:23 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 graphviz amd64 2.42.2-9ubuntu0.1 [642 kB]
+#6 60.12 Get:24 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12t64 amd64 3.12.3-1ubuntu0.12 [2345 kB]
+#6 61.05 Get:25 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 vim-runtime all 2:9.1.0016-1ubuntu7.11 [7282 kB]
+#6 63.51 Get:26 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 vim amd64 2:9.1.0016-1ubuntu7.11 [1882 kB]
+#6 64.58 debconf: delaying package configuration, since apt-utils is not installed
+#6 64.82 Fetched 28.1 MB in 13s (2231 kB/s)
+(Reading database ... 53107 files and directories currently installed.)
+#6 65.18 Preparing to unpack .../00-python3.12_3.12.3-1ubuntu0.12_amd64.deb ...
+#6 65.59 Unpacking python3.12 (3.12.3-1ubuntu0.12) over (3.12.3-1ubuntu0.2) ...
+#6 65.86 Preparing to unpack .../01-libpython3.12-stdlib_3.12.3-1ubuntu0.12_amd64.deb ...
+#6 66.10 Unpacking libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.12) over (3.12.3-1ubuntu0.2) ...
+#6 70.92 Preparing to unpack .../02-python3.12-minimal_3.12.3-1ubuntu0.12_amd64.deb ...
+#6 71.07 Unpacking python3.12-minimal (3.12.3-1ubuntu0.12) over (3.12.3-1ubuntu0.2) ...
+#6 72.86 Preparing to unpack .../03-libpython3.12-minimal_3.12.3-1ubuntu0.12_amd64.deb ...
+#6 73.42 Unpacking libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.12) over (3.12.3-1ubuntu0.2) ...
+#6 85.53 Selecting previously unselected package netcat-openbsd.
+#6 85.55 Preparing to unpack .../04-netcat-openbsd_1.226-1ubuntu2_amd64.deb ...
+#6 85.60 Unpacking netcat-openbsd (1.226-1ubuntu2) ...
+#6 85.87 Preparing to unpack .../05-vim-tiny_2%3a9.1.0016-1ubuntu7.11_amd64.deb ...
+#6 85.96 Unpacking vim-tiny (2:9.1.0016-1ubuntu7.11) over (2:9.1.0016-1ubuntu7.3) ...
+#6 86.44 Preparing to unpack .../06-vim-common_2%3a9.1.0016-1ubuntu7.11_all.deb ...
+#6 86.53 Unpacking vim-common (2:9.1.0016-1ubuntu7.11) over (2:9.1.0016-1ubuntu7.3) ...
+#6 87.26 Selecting previously unselected package libgpm2:amd64.
+#6 87.28 Preparing to unpack .../07-libgpm2_1.20.7-11_amd64.deb ...
+#6 87.36 Unpacking libgpm2:amd64 (1.20.7-11) ...
+#6 87.63 Preparing to unpack .../08-curl_8.5.0-2ubuntu10.8_amd64.deb ...
+#6 87.78 Unpacking curl (8.5.0-2ubuntu10.8) over (8.5.0-2ubuntu10.4) ...
+#6 88.18 Preparing to unpack .../09-libcurl4t64_8.5.0-2ubuntu10.8_amd64.deb ...
+#6 88.26 Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.8) over (8.5.0-2ubuntu10.4) ...
+#6 88.58 Preparing to unpack .../10-libcurl3t64-gnutls_8.5.0-2ubuntu10.8_amd64.deb ...
+#6 88.65 Unpacking libcurl3t64-gnutls:amd64 (8.5.0-2ubuntu10.8) over (8.5.0-2ubuntu10.4) ...
+#6 88.91 Preparing to unpack .../11-git-man_1%3a2.43.0-1ubuntu7.3_all.deb ...
+#6 88.96 Unpacking git-man (1:2.43.0-1ubuntu7.3) over (1:2.43.0-1ubuntu7.1) ...
+#6 89.42 Preparing to unpack .../12-git_1%3a2.43.0-1ubuntu7.3_amd64.deb ...
+#6 89.64 Unpacking git (1:2.43.0-1ubuntu7.3) over (1:2.43.0-1ubuntu7.1) ...
+#6 95.66 Selecting previously unselected package libann0.
+#6 95.69 Preparing to unpack .../13-libann0_1.1.2+doc-9build1_amd64.deb ...
+#6 95.73 Unpacking libann0 (1.1.2+doc-9build1) ...
+#6 95.97 Selecting previously unselected package libcdt5:amd64.
+#6 95.98 Preparing to unpack .../14-libcdt5_2.42.2-9ubuntu0.1_amd64.deb ...
+#6 96.00 Unpacking libcdt5:amd64 (2.42.2-9ubuntu0.1) ...
+#6 96.20 Selecting previously unselected package libcgraph6:amd64.
+#6 96.22 Preparing to unpack .../15-libcgraph6_2.42.2-9ubuntu0.1_amd64.deb ...
+#6 96.24 Unpacking libcgraph6:amd64 (2.42.2-9ubuntu0.1) ...
+#6 96.48 Selecting previously unselected package libgts-0.7-5t64:amd64.
+#6 96.50 Preparing to unpack .../16-libgts-0.7-5t64_0.7.6+darcs121130-5.2build1_amd64.deb ...
+#6 96.53 Unpacking libgts-0.7-5t64:amd64 (0.7.6+darcs121130-5.2build1) ...
+#6 96.98 Selecting previously unselected package libltdl7:amd64.
+#6 96.99 Preparing to unpack .../17-libltdl7_2.4.7-7build1_amd64.deb ...
+#6 97.08 Unpacking libltdl7:amd64 (2.4.7-7build1) ...
+#6 97.47 Selecting previously unselected package libpathplan4:amd64.
+#6 97.49 Preparing to unpack .../18-libpathplan4_2.42.2-9ubuntu0.1_amd64.deb ...
+#6 97.52 Unpacking libpathplan4:amd64 (2.42.2-9ubuntu0.1) ...
+#6 97.73 Selecting previously unselected package libgvc6.
+#6 97.75 Preparing to unpack .../19-libgvc6_2.42.2-9ubuntu0.1_amd64.deb ...
+#6 97.78 Unpacking libgvc6 (2.42.2-9ubuntu0.1) ...
+#6 98.03 Selecting previously unselected package libgvpr2:amd64.
+#6 98.05 Preparing to unpack .../20-libgvpr2_2.42.2-9ubuntu0.1_amd64.deb ...
+#6 98.09 Unpacking libgvpr2:amd64 (2.42.2-9ubuntu0.1) ...
+#6 98.32 Selecting previously unselected package liblab-gamut1:amd64.
+#6 98.34 Preparing to unpack .../21-liblab-gamut1_2.42.2-9ubuntu0.1_amd64.deb ...
+#6 98.38 Unpacking liblab-gamut1:amd64 (2.42.2-9ubuntu0.1) ...
+#6 98.71 Selecting previously unselected package graphviz.
+#6 98.73 Preparing to unpack .../22-graphviz_2.42.2-9ubuntu0.1_amd64.deb ...
+#6 98.76 Unpacking graphviz (2.42.2-9ubuntu0.1) ...
+#6 99.11 Selecting previously unselected package libpython3.12t64:amd64.
+#6 99.12 Preparing to unpack .../23-libpython3.12t64_3.12.3-1ubuntu0.12_amd64.deb ...
+#6 99.15 Unpacking libpython3.12t64:amd64 (3.12.3-1ubuntu0.12) ...
+#6 99.68 Selecting previously unselected package vim-runtime.
+#6 99.69 Preparing to unpack .../24-vim-runtime_2%3a9.1.0016-1ubuntu7.11_all.deb ...
+#6 99.76 Adding 'diversion of /usr/share/vim/vim91/doc/help.txt to /usr/share/vim/vim91/doc/help.txt.vim-tiny by vim-runtime'
+#6 99.86 Adding 'diversion of /usr/share/vim/vim91/doc/tags to /usr/share/vim/vim91/doc/tags.vim-tiny by vim-runtime'
+#6 99.90 Unpacking vim-runtime (2:9.1.0016-1ubuntu7.11) ...
+#6 105.9 Selecting previously unselected package vim.
+#6 106.0 Preparing to unpack .../25-vim_2%3a9.1.0016-1ubuntu7.11_amd64.deb ...
+#6 106.1 Unpacking vim (2:9.1.0016-1ubuntu7.11) ...
+#6 107.0 Setting up libgpm2:amd64 (1.20.7-11) ...
+#6 107.4 Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.8) ...
+#6 107.9 Setting up liblab-gamut1:amd64 (2.42.2-9ubuntu0.1) ...
+#6 108.4 Setting up netcat-openbsd (1.226-1ubuntu2) ...
+#6 108.7 update-alternatives: using /bin/nc.openbsd to provide /bin/nc (nc) in auto mode
+#6 108.7 update-alternatives: warning: skip creation of /usr/share/man/man1/nc.1.gz because associated file /usr/share/man/man1/nc_openbsd.1.gz (of link group nc) doesn't exist
+#6 108.7 update-alternatives: warning: skip creation of /usr/share/man/man1/netcat.1.gz because associated file /usr/share/man/man1/nc_openbsd.1.gz (of link group nc) doesn't exist
+#6 108.9 Setting up libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.12) ...
+#6 109.3 Setting up libcurl3t64-gnutls:amd64 (8.5.0-2ubuntu10.8) ...
+#6 109.7 Setting up vim-common (2:9.1.0016-1ubuntu7.11) ...
+#6 110.1 Setting up libpathplan4:amd64 (2.42.2-9ubuntu0.1) ...
+#6 110.4 Setting up libann0 (1.1.2+doc-9build1) ...
+#6 110.9 Setting up libltdl7:amd64 (2.4.7-7build1) ...
+#6 111.3 Setting up git-man (1:2.43.0-1ubuntu7.3) ...
+#6 111.7 Setting up libgts-0.7-5t64:amd64 (0.7.6+darcs121130-5.2build1) ...
+#6 112.0 Setting up libcdt5:amd64 (2.42.2-9ubuntu0.1) ...
+#6 112.3 Setting up libcgraph6:amd64 (2.42.2-9ubuntu0.1) ...
+#6 112.7 Setting up curl (8.5.0-2ubuntu10.8) ...
+#6 113.2 Setting up vim-runtime (2:9.1.0016-1ubuntu7.11) ...
+#6 113.7 Setting up python3.12-minimal (3.12.3-1ubuntu0.12) ...
+#6 117.1 Setting up libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.12) ...
+#6 117.1 Setting up python3.12 (3.12.3-1ubuntu0.12) ...
+#6 123.0 Setting up vim-tiny (2:9.1.0016-1ubuntu7.11) ...
+#6 123.2 Setting up libpython3.12t64:amd64 (3.12.3-1ubuntu0.12) ...
+#6 123.3 Setting up libgvc6 (2.42.2-9ubuntu0.1) ...
+#6 123.4 Setting up git (1:2.43.0-1ubuntu7.3) ...
+#6 123.5 Setting up libgvpr2:amd64 (2.42.2-9ubuntu0.1) ...
+#6 123.6 Setting up graphviz (2.42.2-9ubuntu0.1) ...
+#6 123.7 Setting up vim (2:9.1.0016-1ubuntu7.11) ...
+#6 123.8 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor (editor) in auto mode
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group editor) doesn't exist
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/da/man1/editor.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group editor) doesn't exist
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/de/man1/editor.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group editor) doesn't exist
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/fr/man1/editor.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group editor) doesn't exist
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/it/man1/editor.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group editor) doesn't exist
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/ja/man1/editor.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group editor) doesn't exist
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/pl/man1/editor.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group editor) doesn't exist
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/ru/man1/editor.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group editor) doesn't exist
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/tr/man1/editor.1.gz because associated file /usr/share/man/tr/man1/vim.1.gz (of link group editor) doesn't exist
+#6 123.8 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/ex (ex) in auto mode
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/man1/ex.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group ex) doesn't exist
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/da/man1/ex.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group ex) doesn't exist
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/de/man1/ex.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group ex) doesn't exist
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/fr/man1/ex.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group ex) doesn't exist
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/it/man1/ex.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group ex) doesn't exist
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/ja/man1/ex.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group ex) doesn't exist
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/pl/man1/ex.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group ex) doesn't exist
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/ru/man1/ex.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group ex) doesn't exist
+#6 123.8 update-alternatives: warning: skip creation of /usr/share/man/tr/man1/ex.1.gz because associated file /usr/share/man/tr/man1/vim.1.gz (of link group ex) doesn't exist
+#6 123.8 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rview (rview) in auto mode
+#6 123.9 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rvim (rvim) in auto mode
+#6 123.9 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vi (vi) in auto mode
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/man1/vi.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group vi) doesn't exist
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/da/man1/vi.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group vi) doesn't exist
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/de/man1/vi.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group vi) doesn't exist
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/fr/man1/vi.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group vi) doesn't exist
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/it/man1/vi.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group vi) doesn't exist
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/ja/man1/vi.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group vi) doesn't exist
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/pl/man1/vi.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group vi) doesn't exist
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/ru/man1/vi.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group vi) doesn't exist
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/tr/man1/vi.1.gz because associated file /usr/share/man/tr/man1/vim.1.gz (of link group vi) doesn't exist
+#6 123.9 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/view (view) in auto mode
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/man1/view.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group view) doesn't exist
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/da/man1/view.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group view) doesn't exist
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/de/man1/view.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group view) doesn't exist
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/fr/man1/view.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group view) doesn't exist
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/it/man1/view.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group view) doesn't exist
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/ja/man1/view.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group view) doesn't exist
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/pl/man1/view.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group view) doesn't exist
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/ru/man1/view.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group view) doesn't exist
+#6 123.9 update-alternatives: warning: skip creation of /usr/share/man/tr/man1/view.1.gz because associated file /usr/share/man/tr/man1/vim.1.gz (of link group view) doesn't exist
+#6 123.9 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode
+#6 124.0 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode
+#6 124.0 Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+#6 DONE 125.9s
+
+#7 [3/5] RUN wget -q https://archive.apache.org/dist/kafka/3.7.1/kafka_2.12-3.7.1.tgz &&     tar -xzf kafka_2.12-3.7.1.tgz -C /usr/local/ &&     ln -s /usr/local/kafka_2.12-3.7.1 /usr/local/kafka &&     rm kafka_2.12-3.7.1.tgz &&     rm -rf /usr/local/kafka/bin/windows /usr/local/kafka/site-docs
+#7 DONE 639.3s
+
+#8 [4/5] RUN pip install --no-cache-dir --upgrade pip setuptools wheel &&     pip install --no-cache-dir     ipywidgets==8.1.5     flask==3.0.3     litserve==0.2.7     pydot==3.0.2     pennylane==0.40.0     pennylane-lightning==0.40.0     pandas==2.2.3     scipy==1.15.2     matplotlib==3.10.0     sympy==1.13.3     seaborn==0.13.2     redis==5.0.1     confluent-kafka==2.8.0     kafka-python-ng &&     fix-permissions "/home/jovyan"
+#8 5.384 Requirement already satisfied: pip in /opt/conda/lib/python3.11/site-packages (24.2)
+#8 6.112 Collecting pip
+#8 6.490   Downloading pip-26.0.1-py3-none-any.whl.metadata (4.7 kB)
+#8 6.512 Requirement already satisfied: setuptools in /opt/conda/lib/python3.11/site-packages (75.1.0)
+#8 8.424 Collecting setuptools
+#8 8.502   Downloading setuptools-82.0.1-py3-none-any.whl.metadata (6.5 kB)
+#8 8.619 Requirement already satisfied: wheel in /opt/conda/lib/python3.11/site-packages (0.44.0)
+#8 9.061 Collecting wheel
+#8 9.136   Downloading wheel-0.46.3-py3-none-any.whl.metadata (2.4 kB)
+#8 9.156 Requirement already satisfied: packaging>=24.0 in /opt/conda/lib/python3.11/site-packages (from wheel) (24.1)
+#8 9.232 Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+#8 9.862    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 3.3 MB/s eta 0:00:00
+#8 9.976 Downloading setuptools-82.0.1-py3-none-any.whl (1.0 MB)
+#8 10.40    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 3.2 MB/s eta 0:00:00
+#8 10.46 Downloading wheel-0.46.3-py3-none-any.whl (30 kB)
+#8 12.73 Installing collected packages: wheel, setuptools, pip
+#8 12.73   Attempting uninstall: wheel
+#8 12.75     Found existing installation: wheel 0.44.0
+#8 12.78     Uninstalling wheel-0.44.0:
+#8 12.97       Successfully uninstalled wheel-0.44.0
+#8 13.11   Attempting uninstall: setuptools
+#8 13.14     Found existing installation: setuptools 75.1.0
+#8 13.15     Uninstalling setuptools-75.1.0:
+#8 18.50       Successfully uninstalled setuptools-75.1.0
+#8 21.38   Attempting uninstall: pip
+#8 21.41     Found existing installation: pip 24.2
+#8 21.64     Uninstalling pip-24.2:
+#8 23.00       Successfully uninstalled pip-24.2
+#8 25.64 Successfully installed pip-26.0.1 setuptools-82.0.1 wheel-0.46.3
+#8 25.64 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 27.09 Requirement already satisfied: ipywidgets==8.1.5 in /opt/conda/lib/python3.11/site-packages (8.1.5)
+#8 27.34 Collecting flask==3.0.3
+#8 27.55   Downloading flask-3.0.3-py3-none-any.whl.metadata (3.2 kB)
+#8 27.64 Collecting litserve==0.2.7
+#8 27.69   Downloading litserve-0.2.7-py3-none-any.whl.metadata (16 kB)
+#8 27.88 Collecting pydot==3.0.2
+#8 27.91   Downloading pydot-3.0.2-py3-none-any.whl.metadata (10 kB)
+#8 28.00 Collecting pennylane==0.40.0
+#8 28.04   Downloading PennyLane-0.40.0-py3-none-any.whl.metadata (10 kB)
+#8 28.29 Collecting pennylane-lightning==0.40.0
+#8 28.38   Downloading PennyLane_Lightning-0.40.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (27 kB)
+#8 29.18 Collecting pandas==2.2.3
+#8 29.32   Downloading pandas-2.2.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+#8 29.92 Collecting scipy==1.15.2
+#8 30.03   Downloading scipy-1.15.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+#8 31.09 Collecting matplotlib==3.10.0
+#8 31.33   Downloading matplotlib-3.10.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+#8 31.35 Requirement already satisfied: sympy==1.13.3 in /opt/conda/lib/python3.11/site-packages (1.13.3)
+#8 31.35 Requirement already satisfied: seaborn==0.13.2 in /opt/conda/lib/python3.11/site-packages (0.13.2)
+#8 31.67 Collecting redis==5.0.1
+#8 31.76   Downloading redis-5.0.1-py3-none-any.whl.metadata (8.9 kB)
+#8 32.82 Collecting confluent-kafka==2.8.0
+#8 32.88   Downloading confluent_kafka-2.8.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (21 kB)
+#8 33.07 Collecting kafka-python-ng
+#8 33.13   Downloading kafka_python_ng-2.2.3-py2.py3-none-any.whl.metadata (9.7 kB)
+#8 33.16 Requirement already satisfied: comm>=0.1.3 in /opt/conda/lib/python3.11/site-packages (from ipywidgets==8.1.5) (0.2.2)
+#8 33.16 Requirement already satisfied: ipython>=6.1.0 in /opt/conda/lib/python3.11/site-packages (from ipywidgets==8.1.5) (8.28.0)
+#8 33.16 Requirement already satisfied: traitlets>=4.3.1 in /opt/conda/lib/python3.11/site-packages (from ipywidgets==8.1.5) (5.14.3)
+#8 33.16 Requirement already satisfied: widgetsnbextension~=4.0.12 in /opt/conda/lib/python3.11/site-packages (from ipywidgets==8.1.5) (4.0.13)
+#8 33.16 Requirement already satisfied: jupyterlab-widgets~=3.0.12 in /opt/conda/lib/python3.11/site-packages (from ipywidgets==8.1.5) (3.0.13)
+#8 33.27 Collecting Werkzeug>=3.0.0 (from flask==3.0.3)
+#8 33.36   Downloading werkzeug-3.1.8-py3-none-any.whl.metadata (4.0 kB)
+#8 33.37 Requirement already satisfied: Jinja2>=3.1.2 in /opt/conda/lib/python3.11/site-packages (from flask==3.0.3) (3.1.4)
+#8 33.45 Collecting itsdangerous>=2.1.2 (from flask==3.0.3)
+#8 33.51   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#8 33.51 Requirement already satisfied: click>=8.1.3 in /opt/conda/lib/python3.11/site-packages (from flask==3.0.3) (8.1.7)
+#8 33.52 Requirement already satisfied: blinker>=1.6.2 in /opt/conda/lib/python3.11/site-packages (from flask==3.0.3) (1.8.2)
+#8 33.73 Collecting fastapi>=0.100 (from litserve==0.2.7)
+#8 33.77   Downloading fastapi-0.136.0-py3-none-any.whl.metadata (28 kB)
+#8 33.89 Collecting uvicorn>=0.29.0 (from uvicorn[standard]>=0.29.0->litserve==0.2.7)
+#8 33.95   Downloading uvicorn-0.44.0-py3-none-any.whl.metadata (6.7 kB)
+#8 33.96 Requirement already satisfied: pyzmq>=22.0.0 in /opt/conda/lib/python3.11/site-packages (from litserve==0.2.7) (26.2.0)
+#8 34.09 Collecting starlette<0.46.0 (from litserve==0.2.7)
+#8 34.25   Downloading starlette-0.45.3-py3-none-any.whl.metadata (6.3 kB)
+#8 34.36 Requirement already satisfied: pyparsing>=3.0.9 in /opt/conda/lib/python3.11/site-packages (from pydot==3.0.2) (3.2.0)
+#8 34.36 Requirement already satisfied: numpy<2.1 in /opt/conda/lib/python3.11/site-packages (from pennylane==0.40.0) (2.0.2)
+#8 34.36 Requirement already satisfied: networkx in /opt/conda/lib/python3.11/site-packages (from pennylane==0.40.0) (3.4.2)
+#8 34.61 Collecting rustworkx>=0.14.0 (from pennylane==0.40.0)
+#8 34.69   Downloading rustworkx-0.17.1-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+#8 35.31 Collecting autograd (from pennylane==0.40.0)
+#8 35.57   Downloading autograd-1.8.0-py3-none-any.whl.metadata (7.5 kB)
+#8 35.86 Collecting tomlkit (from pennylane==0.40.0)
+#8 36.07   Downloading tomlkit-0.14.0-py3-none-any.whl.metadata (2.8 kB)
+#8 36.17 Collecting appdirs (from pennylane==0.40.0)
+#8 36.22   Downloading appdirs-1.4.4-py2.py3-none-any.whl.metadata (9.0 kB)
+#8 36.59 Collecting autoray>=0.6.11 (from pennylane==0.40.0)
+#8 36.75   Downloading autoray-0.8.10-py3-none-any.whl.metadata (6.1 kB)
+#8 36.87 Collecting cachetools (from pennylane==0.40.0)
+#8 36.92   Downloading cachetools-7.0.5-py3-none-any.whl.metadata (5.6 kB)
+#8 36.93 Requirement already satisfied: requests in /opt/conda/lib/python3.11/site-packages (from pennylane==0.40.0) (2.32.3)
+#8 36.93 Requirement already satisfied: typing-extensions in /opt/conda/lib/python3.11/site-packages (from pennylane==0.40.0) (4.12.2)
+#8 36.93 Requirement already satisfied: packaging in /opt/conda/lib/python3.11/site-packages (from pennylane==0.40.0) (24.1)
+#8 36.98 Collecting diastatic-malt (from pennylane==0.40.0)
+#8 37.03   Downloading diastatic_malt-2.15.3-py3-none-any.whl.metadata (2.9 kB)
+#8 37.25 Collecting scipy-openblas32>=0.3.26 (from pennylane-lightning==0.40.0)
+#8 37.33   Downloading scipy_openblas32-0.3.31.188.0-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (57 kB)
+#8 37.43 Requirement already satisfied: python-dateutil>=2.8.2 in /opt/conda/lib/python3.11/site-packages (from pandas==2.2.3) (2.9.0)
+#8 37.43 Requirement already satisfied: pytz>=2020.1 in /opt/conda/lib/python3.11/site-packages (from pandas==2.2.3) (2024.1)
+#8 37.43 Requirement already satisfied: tzdata>=2022.7 in /opt/conda/lib/python3.11/site-packages (from pandas==2.2.3) (2024.2)
+#8 37.44 Requirement already satisfied: contourpy>=1.0.1 in /opt/conda/lib/python3.11/site-packages (from matplotlib==3.10.0) (1.3.0)
+#8 37.45 Requirement already satisfied: cycler>=0.10 in /opt/conda/lib/python3.11/site-packages (from matplotlib==3.10.0) (0.12.1)
+#8 37.45 Requirement already satisfied: fonttools>=4.22.0 in /opt/conda/lib/python3.11/site-packages (from matplotlib==3.10.0) (4.54.1)
+#8 37.45 Requirement already satisfied: kiwisolver>=1.3.1 in /opt/conda/lib/python3.11/site-packages (from matplotlib==3.10.0) (1.4.7)
+#8 37.47 Requirement already satisfied: pillow>=8 in /opt/conda/lib/python3.11/site-packages (from matplotlib==3.10.0) (11.0.0)
+#8 37.47 Requirement already satisfied: mpmath<1.4,>=1.1.0 in /opt/conda/lib/python3.11/site-packages (from sympy==1.13.3) (1.3.0)
+#8 37.55 Requirement already satisfied: anyio<5,>=3.6.2 in /opt/conda/lib/python3.11/site-packages (from starlette<0.46.0->litserve==0.2.7) (4.6.2.post1)
+#8 37.56 Requirement already satisfied: idna>=2.8 in /opt/conda/lib/python3.11/site-packages (from anyio<5,>=3.6.2->starlette<0.46.0->litserve==0.2.7) (3.10)
+#8 37.56 Requirement already satisfied: sniffio>=1.1 in /opt/conda/lib/python3.11/site-packages (from anyio<5,>=3.6.2->starlette<0.46.0->litserve==0.2.7) (1.3.1)
+#8 37.62 INFO: pip is looking at multiple versions of fastapi to determine which version is compatible with other requirements. This could take a while.
+#8 37.62 Collecting fastapi>=0.100 (from litserve==0.2.7)
+#8 37.81   Downloading fastapi-0.135.4-py3-none-any.whl.metadata (28 kB)
+#8 38.26   Downloading fastapi-0.135.3-py3-none-any.whl.metadata (28 kB)
+#8 38.56   Downloading fastapi-0.135.2-py3-none-any.whl.metadata (28 kB)
+#8 38.71   Downloading fastapi-0.135.1-py3-none-any.whl.metadata (30 kB)
+#8 38.88   Downloading fastapi-0.135.0-py3-none-any.whl.metadata (30 kB)
+#8 39.01   Downloading fastapi-0.134.0-py3-none-any.whl.metadata (30 kB)
+#8 39.14   Downloading fastapi-0.133.1-py3-none-any.whl.metadata (30 kB)
+#8 39.34 Requirement already satisfied: pydantic>=2.7.0 in /opt/conda/lib/python3.11/site-packages (from fastapi>=0.100->litserve==0.2.7) (2.9.2)
+#8 39.42 Collecting typing-inspection>=0.4.2 (from fastapi>=0.100->litserve==0.2.7)
+#8 39.58   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+#8 39.96 Collecting annotated-doc>=0.0.2 (from fastapi>=0.100->litserve==0.2.7)
+#8 40.30   Downloading annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
+#8 40.35 Requirement already satisfied: decorator in /opt/conda/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets==8.1.5) (5.1.1)
+#8 40.36 Requirement already satisfied: jedi>=0.16 in /opt/conda/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets==8.1.5) (0.19.1)
+#8 40.36 Requirement already satisfied: matplotlib-inline in /opt/conda/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets==8.1.5) (0.1.7)
+#8 40.36 Requirement already satisfied: prompt-toolkit<3.1.0,>=3.0.41 in /opt/conda/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets==8.1.5) (3.0.48)
+#8 40.36 Requirement already satisfied: pygments>=2.4.0 in /opt/conda/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets==8.1.5) (2.18.0)
+#8 40.37 Requirement already satisfied: stack-data in /opt/conda/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets==8.1.5) (0.6.2)
+#8 40.38 Requirement already satisfied: pexpect>4.3 in /opt/conda/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets==8.1.5) (4.9.0)
+#8 40.40 Requirement already satisfied: wcwidth in /opt/conda/lib/python3.11/site-packages (from prompt-toolkit<3.1.0,>=3.0.41->ipython>=6.1.0->ipywidgets==8.1.5) (0.2.13)
+#8 40.42 Requirement already satisfied: parso<0.9.0,>=0.8.3 in /opt/conda/lib/python3.11/site-packages (from jedi>=0.16->ipython>=6.1.0->ipywidgets==8.1.5) (0.8.4)
+#8 40.45 Requirement already satisfied: MarkupSafe>=2.0 in /opt/conda/lib/python3.11/site-packages (from Jinja2>=3.1.2->flask==3.0.3) (3.0.2)
+#8 40.48 Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.11/site-packages (from pexpect>4.3->ipython>=6.1.0->ipywidgets==8.1.5) (0.7.0)
+#8 40.51 Requirement already satisfied: annotated-types>=0.6.0 in /opt/conda/lib/python3.11/site-packages (from pydantic>=2.7.0->fastapi>=0.100->litserve==0.2.7) (0.7.0)
+#8 40.51 Requirement already satisfied: pydantic-core==2.23.4 in /opt/conda/lib/python3.11/site-packages (from pydantic>=2.7.0->fastapi>=0.100->litserve==0.2.7) (2.23.4)
+#8 40.54 Requirement already satisfied: six>=1.5 in /opt/conda/lib/python3.11/site-packages (from python-dateutil>=2.8.2->pandas==2.2.3) (1.16.0)
+#8 40.61 Requirement already satisfied: h11>=0.8 in /opt/conda/lib/python3.11/site-packages (from uvicorn>=0.29.0->uvicorn[standard]>=0.29.0->litserve==0.2.7) (0.14.0)
+#8 41.09 Collecting httptools>=0.6.3 (from uvicorn[standard]>=0.29.0->litserve==0.2.7)
+#8 41.15   Downloading httptools-0.7.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+#8 41.24 Collecting python-dotenv>=0.13 (from uvicorn[standard]>=0.29.0->litserve==0.2.7)
+#8 41.40   Downloading python_dotenv-1.2.2-py3-none-any.whl.metadata (27 kB)
+#8 41.45 Requirement already satisfied: pyyaml>=5.1 in /opt/conda/lib/python3.11/site-packages (from uvicorn[standard]>=0.29.0->litserve==0.2.7) (6.0.2)
+#8 41.74 Collecting uvloop>=0.15.1 (from uvicorn[standard]>=0.29.0->litserve==0.2.7)
+#8 41.94   Downloading uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.9 kB)
+#8 42.36 Collecting watchfiles>=0.20 (from uvicorn[standard]>=0.29.0->litserve==0.2.7)
+#8 42.40   Downloading watchfiles-1.1.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#8 42.93 Collecting websockets>=10.4 (from uvicorn[standard]>=0.29.0->litserve==0.2.7)
+#8 43.12   Downloading websockets-16.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.8 kB)
+#8 43.36 Collecting termcolor (from diastatic-malt->pennylane==0.40.0)
+#8 43.54   Downloading termcolor-3.3.0-py3-none-any.whl.metadata (6.5 kB)
+#8 43.66 Requirement already satisfied: charset-normalizer<4,>=2 in /opt/conda/lib/python3.11/site-packages (from requests->pennylane==0.40.0) (3.4.0)
+#8 43.67 Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/conda/lib/python3.11/site-packages (from requests->pennylane==0.40.0) (2.2.3)
+#8 43.67 Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/lib/python3.11/site-packages (from requests->pennylane==0.40.0) (2024.8.30)
+#8 43.75 Requirement already satisfied: executing>=1.2.0 in /opt/conda/lib/python3.11/site-packages (from stack-data->ipython>=6.1.0->ipywidgets==8.1.5) (2.1.0)
+#8 43.75 Requirement already satisfied: asttokens>=2.1.0 in /opt/conda/lib/python3.11/site-packages (from stack-data->ipython>=6.1.0->ipywidgets==8.1.5) (2.4.1)
+#8 43.76 Requirement already satisfied: pure-eval in /opt/conda/lib/python3.11/site-packages (from stack-data->ipython>=6.1.0->ipywidgets==8.1.5) (0.2.3)
+#8 44.03 Downloading flask-3.0.3-py3-none-any.whl (101 kB)
+#8 44.64 Downloading litserve-0.2.7-py3-none-any.whl (63 kB)
+#8 44.78 Downloading pydot-3.0.2-py3-none-any.whl (35 kB)
+#8 45.21 Downloading PennyLane-0.40.0-py3-none-any.whl (2.0 MB)
+#8 48.30    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 675.2 kB/s  0:00:03
+#8 48.49 Downloading PennyLane_Lightning-0.40.0-cp311-cp311-manylinux_2_28_x86_64.whl (2.4 MB)
+#8 50.51    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 1.3 MB/s  0:00:02
+#8 50.58 Downloading pandas-2.2.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
+#8 64.37    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.1/13.1 MB 934.5 kB/s  0:00:13
+#8 64.47 Downloading scipy-1.15.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.6 MB)
+#8 84.16    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.6/37.6 MB 2.0 MB/s  0:00:19
+#8 84.89 Downloading matplotlib-3.10.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.6 MB)
+#8 88.34    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 2.5 MB/s  0:00:03
+#8 88.39 Downloading redis-5.0.1-py3-none-any.whl (250 kB)
+#8 88.56 Downloading confluent_kafka-2.8.0-cp311-cp311-manylinux_2_28_x86_64.whl (3.8 MB)
+#8 89.93    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 3.0 MB/s  0:00:01
+#8 89.96 Downloading starlette-0.45.3-py3-none-any.whl (71 kB)
+#8 90.02 Downloading kafka_python_ng-2.2.3-py2.py3-none-any.whl (232 kB)
+#8 90.10 Downloading autoray-0.8.10-py3-none-any.whl (939 kB)
+#8 90.35    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 940.0/940.0 kB 5.7 MB/s  0:00:00
+#8 90.41 Downloading fastapi-0.133.1-py3-none-any.whl (109 kB)
+#8 90.52 Downloading annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+#8 90.57 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#8 90.63 Downloading rustworkx-0.17.1-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+#8 91.29    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 3.9 MB/s  0:00:00
+#8 91.40 Downloading scipy_openblas32-0.3.31.188.0-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.9 MB)
+#8 94.05    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.9/8.9 MB 3.4 MB/s  0:00:02
+#8 94.09 Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+#8 94.14 Downloading uvicorn-0.44.0-py3-none-any.whl (69 kB)
+#8 94.21 Downloading httptools-0.7.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (456 kB)
+#8 94.39 Downloading python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+#8 94.45 Downloading uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.8 MB)
+#8 95.50    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 3.6 MB/s  0:00:01
+#8 95.54 Downloading watchfiles-1.1.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+#8 95.87 Downloading websockets-16.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (184 kB)
+#8 96.00 Downloading werkzeug-3.1.8-py3-none-any.whl (226 kB)
+#8 96.16 Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+#8 96.21 Downloading autograd-1.8.0-py3-none-any.whl (51 kB)
+#8 96.28 Downloading cachetools-7.0.5-py3-none-any.whl (13 kB)
+#8 96.35 Downloading diastatic_malt-2.15.3-py3-none-any.whl (167 kB)
+#8 96.44 Downloading termcolor-3.3.0-py3-none-any.whl (7.7 kB)
+#8 96.48 Downloading tomlkit-0.14.0-py3-none-any.whl (39 kB)
+#8 98.81 Installing collected packages: appdirs, Werkzeug, websockets, uvloop, uvicorn, typing-inspection, tomlkit, termcolor, scipy-openblas32, scipy, rustworkx, redis, python-dotenv, pydot, kafka-python-ng, itsdangerous, httptools, confluent-kafka, cachetools, autoray, autograd, annotated-doc, watchfiles, starlette, pandas, matplotlib, flask, diastatic-malt, fastapi, litserve, pennylane-lightning, pennylane
+#8 101.5   Attempting uninstall: scipy
+#8 101.5     Found existing installation: scipy 1.14.1
+#8 101.9     Uninstalling scipy-1.14.1:
+#8 105.1       Successfully uninstalled scipy-1.14.1
+#8 130.6   Attempting uninstall: pandas
+#8 130.6     Found existing installation: pandas 2.2.2
+#8 131.4     Uninstalling pandas-2.2.2:
+#8 134.7       Successfully uninstalled pandas-2.2.2
+#8 154.2   Attempting uninstall: matplotlib
+#8 154.2     Found existing installation: matplotlib 3.9.2
+#8 154.4     Uninstalling matplotlib-3.9.2:
+#8 156.0       Successfully uninstalled matplotlib-3.9.2
+#8 167.6
+#8 167.7 Successfully installed Werkzeug-3.1.8 annotated-doc-0.0.4 appdirs-1.4.4 autograd-1.8.0 autoray-0.8.10 cachetools-7.0.5 confluent-kafka-2.8.0 diastatic-malt-2.15.3 fastapi-0.133.1 flask-3.0.3 httptools-0.7.1 itsdangerous-2.2.0 kafka-python-ng-2.2.3 litserve-0.2.7 matplotlib-3.10.0 pandas-2.2.3 pennylane-0.40.0 pennylane-lightning-0.40.0 pydot-3.0.2 python-dotenv-1.2.2 redis-5.0.1 rustworkx-0.17.1 scipy-1.15.2 scipy-openblas32-0.3.31.188.0 starlette-0.45.3 termcolor-3.3.0 tomlkit-0.14.0 typing-inspection-0.4.2 uvicorn-0.44.0 uvloop-0.22.1 watchfiles-1.1.1 websockets-16.0
+#8 167.7 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 DONE 170.5s
+
+#9 [5/5] WORKDIR /home/jovyan/notebooks
+#9 DONE 0.6s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 95.4s done
+#10 exporting manifest sha256:4f056490426f3ad5b613583cae3d937a7ed6ac709f5536179b1c8b121da75aa8
+#10 exporting manifest sha256:4f056490426f3ad5b613583cae3d937a7ed6ac709f5536179b1c8b121da75aa8 0.4s done
+#10 exporting config sha256:88793cec1fc86c78f54ca4b548a5605e128215afa5d32e4867bb06ced68edfaa
+#10 exporting config sha256:88793cec1fc86c78f54ca4b548a5605e128215afa5d32e4867bb06ced68edfaa 0.5s done
+#10 exporting attestation manifest sha256:bf40d782fd28c6af819bd6c4a65224a13dab3544644fb3bbdb8526cf02737a3e
+#10 exporting attestation manifest sha256:bf40d782fd28c6af819bd6c4a65224a13dab3544644fb3bbdb8526cf02737a3e 0.9s done
+#10 exporting manifest list sha256:c4c32a7f7074c7737772b62756ead52373c45b3b2777aae17e0119aa6af815c1
+#10 exporting manifest list sha256:c4c32a7f7074c7737772b62756ead52373c45b3b2777aae17e0119aa6af815c1 0.4s done
+#10 naming to docker.io/library/jupyterlab-project-jupyter:latest 0.1s done
+#10 unpacking to docker.io/library/jupyterlab-project-jupyter:latest
+#10 unpacking to docker.io/library/jupyterlab-project-jupyter:latest 51.7s done
+#10 DONE 150.8s
+[+] up 32/32
+ ✔ Image redis:7.2-alpine             Pulled                                                   22.4s
+ ✔ Image confluentinc/cp-kafka:7.8.0  Pulled                                                   136.9s
+ ✔ Image jupyterlab-project-jupyter   Built                                                    1886.3s
+ ✔ Network jupyterlab-project_default Created                                                  0.4s
+ ✔ Container broker                   Started                                                  6.4s
+ ✔ Container redis                    Started                                                  6.4s
+ ✔ Container jupyter                  Started                                                  5.8s
+(rta_env) PS C:\Users\barto\jupyterlab-project> docker compose up
+[+] up 3/3
+ ✔ Container broker  Running                                                                      0.0s
+ ✔ Container redis   Running                                                                      0.0s
+ ✔ Container jupyter Running                                                                      0.0s
+Attaching to broker, jupyter, redis
+broker  | [2026-04-17 09:09:23,621] INFO Initialized snapshots with IDs SortedSet() from /var/lib/kafka/data/__cluster_metadata-0 (kafka.raft.KafkaMetadataLog$)
+broker  | [2026-04-17 09:09:23,758] INFO [raft-expiration-reaper]: Starting (kafka.raft.TimingWheelExpirationService$ExpiredOperationReaper)
+broker  | [2026-04-17 09:09:23,942] INFO [RaftManager id=1] Reading KRaft snapshot and log as part of the initialization (org.apache.kafka.raft.KafkaRaftClient)
+broker  | [2026-04-17 09:09:23,958] INFO [RaftManager id=1] Starting request manager with static voters: [broker:9093 (id: 1 rack: null)] (org.apache.kafka.raft.KafkaRaftClient)
+broker  | [2026-04-17 09:09:25,406] INFO [RaftManager id=1] Completed transition to Unattached(epoch=0, voters=[1], electionTimeoutMs=1293) from null (org.apache.kafka.raft.QuorumState)
+broker  | [2026-04-17 09:09:25,436] INFO [RaftManager id=1] Completed transition to CandidateState(localId=1, localDirectoryId=aVzuokqSpVuiW7M2pXiDVA,epoch=1, retries=1, voteStates={1=GRANTED}, highWatermark=Optional.empty, electionTimeoutMs=1301) from Unattached(epoch=0, voters=[1], electionTimeoutMs=1293) (org.apache.kafka.raft.QuorumState)
+broker  | [2026-04-17 09:09:25,493] INFO [RaftManager id=1] Completed transition to Leader(localId=1, epoch=1, epochStartOffset=0, highWatermark=Optional.empty, voterStates={1=ReplicaState(nodeId=1, endOffset=Optional.empty, lastFetchTimestamp=-1, lastCaughtUpTimestamp=-1, hasAcknowledgedLeader=true)}) from CandidateState(localId=1, localDirectoryId=aVzuokqSpVuiW7M2pXiDVA,epoch=1, retries=1, voteStates={1=GRANTED}, highWatermark=Optional.empty, electionTimeoutMs=1301) (org.apache.kafka.raft.QuorumState)
+broker  | [2026-04-17 09:09:25,701] INFO [kafka-1-raft-io-thread]: Starting (org.apache.kafka.raft.KafkaRaftClientDriver)
+broker  | [2026-04-17 09:09:25,743] INFO [kafka-1-raft-outbound-request-thread]: Starting (org.apache.kafka.raft.KafkaNetworkChannel$SendThread)
+broker  | [2026-04-17 09:09:25,866] INFO [MetadataLoader id=1] initializeNewPublishers: the loader is still catching up because we still don't know the high water mark yet. (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:25,888] INFO [ControllerServer id=1] Waiting for controller quorum voters future (kafka.server.ControllerServer)
+broker  | [2026-04-17 09:09:25,889] INFO [ControllerServer id=1] Finished waiting for controller quorum voters future (kafka.server.ControllerServer)
+broker  | [2026-04-17 09:09:25,955] INFO [RaftManager id=1] High watermark set to LogOffsetMetadata(offset=1, metadata=Optional[(segmentBaseOffset=0,relativePositionInSegment=91)]) for the first time for epoch 1 based on indexOfHw 0 and voters [ReplicaState(nodeId=1, endOffset=Optional[LogOffsetMetadata(offset=1, metadata=Optional[(segmentBaseOffset=0,relativePositionInSegment=91)])], lastFetchTimestamp=-1, lastCaughtUpTimestamp=-1, hasAcknowledgedLeader=true)] (org.apache.kafka.raft.LeaderState)
+broker  | [2026-04-17 09:09:25,967] INFO [MetadataLoader id=1] initializeNewPublishers: The loader is still catching up because we have loaded up to offset -1, but the high water mark is 1 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:26,067] INFO [MetadataLoader id=1] initializeNewPublishers: The loader is still catching up because we have loaded up to offset -1, but the high water mark is 1 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:26,075] INFO [RaftManager id=1] Registered the listener org.apache.kafka.image.loader.MetadataLoader@1465705731 (org.apache.kafka.raft.KafkaRaftClient)
+broker  | [2026-04-17 09:09:26,098] INFO [MetadataLoader id=1] maybePublishMetadata(LOG_DELTA): The loader is still catching up because we have not loaded a controller record as of offset 0 and high water mark is 1 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:26,117] INFO [QuorumController id=1] Creating new QuorumController with clusterId MkU3OEVBNTcwNTJENDM2Qk. (org.apache.kafka.controller.QuorumController)
+broker  | [2026-04-17 09:09:26,118] INFO [RaftManager id=1] Registered the listener org.apache.kafka.controller.QuorumController$QuorumMetaLogListener@1178288664 (org.apache.kafka.raft.KafkaRaftClient)
+broker  | [2026-04-17 09:09:26,128] INFO [QuorumController id=1] Becoming the active controller at epoch 1, next write offset 1. (org.apache.kafka.controller.QuorumController)
+broker  | [2026-04-17 09:09:26,156] WARN [QuorumController id=1] Performing controller activation. The metadata log appears to be empty. Appending 1 bootstrap record(s) in metadata transaction at metadata.version 3.8-IV0 from bootstrap source 'the binary bootstrap metadata file: /var/lib/kafka/data/bootstrap.checkpoint'. Setting the ZK migration state to NONE since this is a de-novo KRaft cluster. (org.apache.kafka.controller.QuorumController)
+broker  | [2026-04-17 09:09:26,166] INFO [QuorumController id=1] Replayed BeginTransactionRecord(name='Bootstrap records') at offset 1. (org.apache.kafka.controller.OffsetControlManager)
+broker  | [2026-04-17 09:09:26,168] INFO [QuorumController id=1] Replayed a FeatureLevelRecord setting metadata.version to 3.8-IV0 (org.apache.kafka.controller.FeatureControlManager)
+broker  | [2026-04-17 09:09:26,169] INFO [MetadataLoader id=1] initializeNewPublishers: The loader finished catching up to the current high water mark of 1 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:26,170] INFO [QuorumController id=1] Replayed EndTransactionRecord() at offset 4. (org.apache.kafka.controller.OffsetControlManager)
+broker  | [2026-04-17 09:09:26,187] INFO [controller-1-ThrottledChannelReaper-Fetch]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+broker  | [2026-04-17 09:09:26,193] INFO [controller-1-ThrottledChannelReaper-Produce]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+broker  | [2026-04-17 09:09:26,197] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing SnapshotGenerator with a snapshot at offset 0 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:26,206] INFO [controller-1-ThrottledChannelReaper-Request]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+broker  | [2026-04-17 09:09:26,215] INFO [controller-1-ThrottledChannelReaper-ControllerMutation]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+broker  | [2026-04-17 09:09:26,401] INFO [ExpirationReaper-1-AlterAcls]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+broker  | [2026-04-17 09:09:26,503] INFO [ControllerServer id=1] Waiting for the controller metadata publishers to be installed (kafka.server.ControllerServer)
+broker  | [2026-04-17 09:09:26,503] INFO [ControllerServer id=1] Finished waiting for the controller metadata publishers to be installed (kafka.server.ControllerServer)
+broker  | [2026-04-17 09:09:26,505] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing KRaftMetadataCachePublisher with a snapshot at offset 4 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:26,505] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing FeaturesPublisher with a snapshot at offset 4 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:26,505] INFO [ControllerServer id=1] Loaded new metadata Features(metadataVersion=3.8-IV0, finalizedFeatures={metadata.version=20}, finalizedFeaturesEpoch=4). (org.apache.kafka.metadata.publisher.FeaturesPublisher)
+broker  | [2026-04-17 09:09:26,506] INFO [SocketServer listenerType=CONTROLLER, nodeId=1] Enabling request processing. (kafka.network.SocketServer)
+broker  | [2026-04-17 09:09:26,506] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing ControllerRegistrationsPublisher with a snapshot at offset 4 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:26,506] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing ControllerRegistrationManager with a snapshot at offset 4 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:26,508] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing DynamicConfigPublisher controller id=1 with a snapshot at offset 4 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:26,510] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing DynamicClientQuotaPublisher controller id=1 with a snapshot at offset 4 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:26,515] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing ScramPublisher controller id=1 with a snapshot at offset 4 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:26,539] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing DelegationTokenPublisher controller id=1 with a snapshot at offset 4 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:26,548] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing ControllerMetadataMetricsPublisher with a snapshot at offset 4 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:26,549] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing AclPublisher controller id=1 with a snapshot at offset 4 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:26,557] INFO Awaiting socket connections on broker:9093. (kafka.network.DataPlaneAcceptor)
+broker  | [2026-04-17 09:09:26,646] INFO [ControllerServer id=1] Waiting for all of the authorizer futures to be completed (kafka.server.ControllerServer)
+broker  | [2026-04-17 09:09:26,646] INFO [ControllerServer id=1] Finished waiting for all of the authorizer futures to be completed (kafka.server.ControllerServer)
+broker  | [2026-04-17 09:09:26,647] INFO [ControllerServer id=1] Waiting for all of the SocketServer Acceptors to be started (kafka.server.ControllerServer)
+broker  | [2026-04-17 09:09:26,647] INFO [ControllerServer id=1] Finished waiting for all of the SocketServer Acceptors to be started (kafka.server.ControllerServer)
+broker  | [2026-04-17 09:09:26,647] INFO [ControllerRegistrationManager id=1 incarnation=cD_AG3y_SqCZW_9fksrnZw] initialized channel manager. (kafka.server.ControllerRegistrationManager)
+broker  | [2026-04-17 09:09:26,651] INFO [controller-1-to-controller-registration-channel-manager]: Starting (kafka.server.NodeToControllerRequestThread)
+broker  | [2026-04-17 09:09:26,653] INFO [controller-1-to-controller-registration-channel-manager]: Recorded new KRaft controller, from now on will use node broker:9093 (id: 1 rack: null) (kafka.server.NodeToControllerRequestThread)
+broker  | [2026-04-17 09:09:26,658] INFO [BrokerServer id=1] Transition from SHUTDOWN to STARTING (kafka.server.BrokerServer)
+broker  | [2026-04-17 09:09:26,658] INFO [ControllerRegistrationManager id=1 incarnation=cD_AG3y_SqCZW_9fksrnZw] sendControllerRegistration: attempting to send ControllerRegistrationRequestData(controllerId=1, incarnationId=cD_AG3y_SqCZW_9fksrnZw, zkMigrationReady=false, listeners=[Listener(name='CONTROLLER', host='broker', port=9093, securityProtocol=0)], features=[Feature(name='metadata.version', minSupportedVersion=1, maxSupportedVersion=20)]) (kafka.server.ControllerRegistrationManager)
+broker  | [2026-04-17 09:09:26,661] INFO [BrokerServer id=1] Starting broker (kafka.server.BrokerServer)
+broker  | [2026-04-17 09:09:26,677] INFO RemoteLogManagerConfig values:
+broker  |       log.local.retention.bytes = -2
+broker  |       log.local.retention.ms = -2
+broker  |       remote.fetch.max.wait.ms = 500
+broker  |       remote.log.index.file.cache.total.size.bytes = 1073741824
+broker  |       remote.log.manager.copier.thread.pool.size = 10
+broker  |       remote.log.manager.copy.max.bytes.per.second = 9223372036854775807
+broker  |       remote.log.manager.copy.quota.window.num = 11
+broker  |       remote.log.manager.copy.quota.window.size.seconds = 1
+broker  |       remote.log.manager.expiration.thread.pool.size = 10
+broker  |       remote.log.manager.fetch.max.bytes.per.second = 9223372036854775807
+broker  |       remote.log.manager.fetch.quota.window.num = 11
+broker  |       remote.log.manager.fetch.quota.window.size.seconds = 1
+broker  |       remote.log.manager.task.interval.ms = 30000
+broker  |       remote.log.manager.task.retry.backoff.max.ms = 30000
+broker  |       remote.log.manager.task.retry.backoff.ms = 500
+broker  |       remote.log.manager.task.retry.jitter = 0.2
+broker  |       remote.log.manager.thread.pool.size = 10
+broker  |       remote.log.metadata.custom.metadata.max.bytes = 128
+broker  |       remote.log.metadata.manager.class.name = org.apache.kafka.server.log.remote.metadata.storage.TopicBasedRemoteLogMetadataManager
+broker  |       remote.log.metadata.manager.class.path = null
+broker  |       remote.log.metadata.manager.impl.prefix = rlmm.config.
+broker  |       remote.log.metadata.manager.listener.name = null
+broker  |       remote.log.reader.max.pending.tasks = 100
+broker  |       remote.log.reader.threads = 10
+broker  |       remote.log.storage.manager.class.name = null
+broker  |       remote.log.storage.manager.class.path = null
+broker  |       remote.log.storage.manager.impl.prefix = rsm.config.
+broker  |       remote.log.storage.system.enable = false
+broker  |  (org.apache.kafka.server.log.remote.storage.RemoteLogManagerConfig)
+broker  | [2026-04-17 09:09:26,714] INFO [broker-1-ThrottledChannelReaper-Fetch]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+broker  | [2026-04-17 09:09:26,718] INFO [broker-1-ThrottledChannelReaper-Request]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+broker  | [2026-04-17 09:09:26,720] INFO [broker-1-ThrottledChannelReaper-ControllerMutation]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+broker  | [2026-04-17 09:09:26,736] INFO [broker-1-ThrottledChannelReaper-Produce]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+broker  | [2026-04-17 09:09:26,901] INFO [BrokerServer id=1] Waiting for controller quorum voters future (kafka.server.BrokerServer)
+broker  | [2026-04-17 09:09:26,902] INFO [BrokerServer id=1] Finished waiting for controller quorum voters future (kafka.server.BrokerServer)
+broker  | [2026-04-17 09:09:26,952] INFO [broker-1-to-controller-forwarding-channel-manager]: Starting (kafka.server.NodeToControllerRequestThread)
+broker  | [2026-04-17 09:09:26,952] INFO [broker-1-to-controller-forwarding-channel-manager]: Recorded new KRaft controller, from now on will use node broker:9093 (id: 1 rack: null) (kafka.server.NodeToControllerRequestThread)
+broker  | [2026-04-17 09:09:27,062] INFO [client-metrics-reaper]: Starting (org.apache.kafka.server.util.timer.SystemTimerReaper$Reaper)
+broker  | [2026-04-17 09:09:27,306] INFO [QuorumController id=1] Replayed RegisterControllerRecord contaning ControllerRegistration(id=1, incarnationId=cD_AG3y_SqCZW_9fksrnZw, zkMigrationReady=false, listeners=[Endpoint(listenerName='CONTROLLER', securityProtocol=PLAINTEXT, host='broker', port=9093)], supportedFeatures={metadata.version: 1-20}). (org.apache.kafka.controller.ClusterControlManager)
+broker  | [2026-04-17 09:09:27,348] INFO [ControllerRegistrationManager id=1 incarnation=cD_AG3y_SqCZW_9fksrnZw] Our registration has been persisted to the metadata log. (kafka.server.ControllerRegistrationManager)
+broker  | [2026-04-17 09:09:27,355] INFO [ControllerRegistrationManager id=1 incarnation=cD_AG3y_SqCZW_9fksrnZw] RegistrationResponseHandler: controller acknowledged ControllerRegistrationRequest. (kafka.server.ControllerRegistrationManager)
+broker  | [2026-04-17 09:09:27,452] INFO Updated connection-accept-rate max connection creation rate to 2147483647 (kafka.network.ConnectionQuotas)
+broker  | [2026-04-17 09:09:27,478] INFO [SocketServer listenerType=BROKER, nodeId=1] Created data-plane acceptor and processors for endpoint : ListenerName(PLAINTEXT) (kafka.network.SocketServer)
+broker  | [2026-04-17 09:09:27,479] INFO Updated connection-accept-rate max connection creation rate to 2147483647 (kafka.network.ConnectionQuotas)
+broker  | [2026-04-17 09:09:27,545] INFO [SocketServer listenerType=BROKER, nodeId=1] Created data-plane acceptor and processors for endpoint : ListenerName(PLAINTEXT_HOST) (kafka.network.SocketServer)
+broker  | [2026-04-17 09:09:27,598] INFO [broker-1-to-controller-alter-partition-channel-manager]: Starting (kafka.server.NodeToControllerRequestThread)
+broker  | [2026-04-17 09:09:27,599] INFO [broker-1-to-controller-alter-partition-channel-manager]: Recorded new KRaft controller, from now on will use node broker:9093 (id: 1 rack: null) (kafka.server.NodeToControllerRequestThread)
+broker  | [2026-04-17 09:09:27,661] INFO [broker-1-to-controller-directory-assignments-channel-manager]: Starting (kafka.server.NodeToControllerRequestThread)
+broker  | [2026-04-17 09:09:27,662] INFO [broker-1-to-controller-directory-assignments-channel-manager]: Recorded new KRaft controller, from now on will use node broker:9093 (id: 1 rack: null) (kafka.server.NodeToControllerRequestThread)
+broker  | [2026-04-17 09:09:27,785] INFO [ExpirationReaper-1-Produce]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+broker  | [2026-04-17 09:09:27,785] INFO [ExpirationReaper-1-Fetch]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+broker  | [2026-04-17 09:09:27,804] INFO [ExpirationReaper-1-DeleteRecords]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+broker  | [2026-04-17 09:09:27,807] INFO [ExpirationReaper-1-ElectLeader]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+broker  | [2026-04-17 09:09:27,820] INFO [ExpirationReaper-1-RemoteFetch]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+broker  | [2026-04-17 09:09:27,966] INFO [ExpirationReaper-1-Heartbeat]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+broker  | [2026-04-17 09:09:27,978] INFO [ExpirationReaper-1-Rebalance]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+broker  | [2026-04-17 09:09:28,257] INFO Unable to read the broker epoch in /var/lib/kafka/data. (kafka.log.LogManager)
+broker  | [2026-04-17 09:09:28,277] INFO [broker-1-to-controller-heartbeat-channel-manager]: Starting (kafka.server.NodeToControllerRequestThread)
+broker  | [2026-04-17 09:09:28,278] INFO [broker-1-to-controller-heartbeat-channel-manager]: Recorded new KRaft controller, from now on will use node broker:9093 (id: 1 rack: null) (kafka.server.NodeToControllerRequestThread)
+broker  | [2026-04-17 09:09:28,293] INFO [BrokerLifecycleManager id=1] Incarnation BCLvl89SSJOVARh_tEIHeA of broker 1 in cluster MkU3OEVBNTcwNTJENDM2Qk is now STARTING. (kafka.server.BrokerLifecycleManager)
+broker  | [2026-04-17 09:09:28,392] WARN [QuorumController id=1] Broker 1 registered with feature metadata.version that is unknown to the controller (org.apache.kafka.controller.ClusterControlManager)
+broker  | [2026-04-17 09:09:28,436] INFO [QuorumController id=1] Replayed initial RegisterBrokerRecord for broker 1: RegisterBrokerRecord(brokerId=1, isMigratingZkBroker=false, incarnationId=BCLvl89SSJOVARh_tEIHeA, brokerEpoch=10, endPoints=[BrokerEndpoint(name='PLAINTEXT', host='broker', port=9092, securityProtocol=0), BrokerEndpoint(name='PLAINTEXT_HOST', host='localhost', port=29092, securityProtocol=0)], features=[BrokerFeature(name='metadata.version', minSupportedVersion=1, maxSupportedVersion=20)], rack=null, fenced=true, inControlledShutdown=false, logDirs=[aVzuokqSpVuiW7M2pXiDVA]) (org.apache.kafka.controller.ClusterControlManager)
+broker  | [2026-04-17 09:09:28,492] INFO [BrokerLifecycleManager id=1] Successfully registered broker 1 with broker epoch 10 (kafka.server.BrokerLifecycleManager)
+broker  | [2026-04-17 09:09:28,543] INFO [ExpirationReaper-1-AlterAcls]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+broker  | [2026-04-17 09:09:28,592] INFO [BrokerLifecycleManager id=1] The broker has caught up. Transitioning from STARTING to RECOVERY. (kafka.server.BrokerLifecycleManager)
+broker  | [2026-04-17 09:09:28,614] INFO [BrokerLifecycleManager id=1] The broker is in RECOVERY. (kafka.server.BrokerLifecycleManager)
+broker  | [2026-04-17 09:09:28,701] INFO [BrokerServer id=1] Waiting for the broker metadata publishers to be installed (kafka.server.BrokerServer)
+broker  | [2026-04-17 09:09:28,701] INFO [BrokerServer id=1] Finished waiting for the broker metadata publishers to be installed (kafka.server.BrokerServer)
+broker  | [2026-04-17 09:09:28,702] INFO [BrokerServer id=1] Waiting for the controller to acknowledge that we are caught up (kafka.server.BrokerServer)
+broker  | [2026-04-17 09:09:28,702] INFO [BrokerServer id=1] Finished waiting for the controller to acknowledge that we are caught up (kafka.server.BrokerServer)
+broker  | [2026-04-17 09:09:28,702] INFO [BrokerServer id=1] Waiting for the initial broker metadata update to be published (kafka.server.BrokerServer)
+broker  | [2026-04-17 09:09:28,703] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing MetadataVersionPublisher(id=1) with a snapshot at offset 10 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:28,703] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing BrokerMetadataPublisher with a snapshot at offset 10 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:28,708] INFO [BrokerMetadataPublisher id=1] Publishing initial metadata at offset OffsetAndEpoch(offset=10, epoch=1) with metadata.version 3.8-IV0. (kafka.server.metadata.BrokerMetadataPublisher)
+broker  | [2026-04-17 09:09:28,711] INFO Loading logs from log dirs ArrayBuffer(/var/lib/kafka/data) (kafka.log.LogManager)
+broker  | [2026-04-17 09:09:28,756] INFO No logs found to be loaded in /var/lib/kafka/data (kafka.log.LogManager)
+broker  | [2026-04-17 09:09:28,825] INFO Loaded 0 logs in 109ms (kafka.log.LogManager)
+broker  | [2026-04-17 09:09:28,827] INFO Starting log cleanup with a period of 300000 ms. (kafka.log.LogManager)
+broker  | [2026-04-17 09:09:28,847] INFO Starting log flusher with a default period of 9223372036854775807 ms. (kafka.log.LogManager)
+broker  | [2026-04-17 09:09:28,963] INFO Starting the log cleaner (kafka.log.LogCleaner)
+broker  | [2026-04-17 09:09:32,765] INFO [kafka-log-cleaner-thread-0]: Starting (kafka.log.LogCleaner$CleanerThread)
+broker  | [2026-04-17 09:09:32,782] INFO [BrokerLifecycleManager id=1] The broker is in RECOVERY. (kafka.server.BrokerLifecycleManager)
+broker  | [2026-04-17 09:09:32,800] INFO [AddPartitionsToTxnSenderThread-1]: Starting (kafka.server.AddPartitionsToTxnManager)
+broker  | [2026-04-17 09:09:32,805] INFO [LogDirFailureHandler]: Starting (kafka.server.ReplicaManager$LogDirFailureHandler)
+broker  | [2026-04-17 09:09:32,813] INFO [GroupCoordinator 1]: Starting up. (kafka.coordinator.group.GroupCoordinator)
+broker  | [2026-04-17 09:09:32,833] INFO [GroupCoordinator 1]: Startup complete. (kafka.coordinator.group.GroupCoordinator)
+broker  | [2026-04-17 09:09:32,840] INFO [TransactionCoordinator id=1] Starting up. (kafka.coordinator.transaction.TransactionCoordinator)
+broker  | [2026-04-17 09:09:32,850] INFO [TransactionCoordinator id=1] Startup complete. (kafka.coordinator.transaction.TransactionCoordinator)
+broker  | [2026-04-17 09:09:32,850] INFO [TxnMarkerSenderThread-1]: Starting (kafka.coordinator.transaction.TransactionMarkerChannelManager)
+broker  | [2026-04-17 09:09:32,913] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing BrokerRegistrationTracker(id=1) with a snapshot at offset 10 (org.apache.kafka.image.loader.MetadataLoader)
+broker  | [2026-04-17 09:09:32,913] INFO [BrokerServer id=1] Finished waiting for the initial broker metadata update to be published (kafka.server.BrokerServer)
+broker  | [2026-04-17 09:09:32,918] INFO KafkaConfig values:
+broker  |       advertised.listeners = PLAINTEXT://broker:9092,PLAINTEXT_HOST://localhost:29092
+broker  |       alter.config.policy.class.name = null
+broker  |       alter.log.dirs.replication.quota.window.num = 11
+broker  |       alter.log.dirs.replication.quota.window.size.seconds = 1
+broker  |       authorizer.class.name =
+broker  |       auto.create.topics.enable = true
+broker  |       auto.include.jmx.reporter = true
+broker  |       auto.leader.rebalance.enable = true
+broker  |       background.threads = 10
+broker  |       broker.heartbeat.interval.ms = 2000
+broker  |       broker.id = 1
+broker  |       broker.id.generation.enable = true
+broker  |       broker.rack = null
+broker  |       broker.session.timeout.ms = 9000
+broker  |       client.quota.callback.class = null
+broker  |       compression.gzip.level = -1
+broker  |       compression.lz4.level = 9
+broker  |       compression.type = producer
+broker  |       compression.zstd.level = 3
+broker  |       connection.failed.authentication.delay.ms = 100
+broker  |       connections.max.idle.ms = 600000
+broker  |       connections.max.reauth.ms = 0
+broker  |       control.plane.listener.name = null
+broker  |       controlled.shutdown.enable = true
+broker  |       controlled.shutdown.max.retries = 3
+broker  |       controlled.shutdown.retry.backoff.ms = 5000
+broker  |       controller.listener.names = CONTROLLER
+broker  |       controller.quorum.append.linger.ms = 25
+broker  |       controller.quorum.bootstrap.servers = []
+broker  |       controller.quorum.election.backoff.max.ms = 1000
+broker  |       controller.quorum.election.timeout.ms = 1000
+broker  |       controller.quorum.fetch.timeout.ms = 2000
+broker  |       controller.quorum.request.timeout.ms = 2000
+broker  |       controller.quorum.retry.backoff.ms = 20
+broker  |       controller.quorum.voters = [1@broker:9093]
+broker  |       controller.quota.window.num = 11
+broker  |       controller.quota.window.size.seconds = 1
+broker  |       controller.socket.timeout.ms = 30000
+broker  |       create.topic.policy.class.name = null
+broker  |       default.replication.factor = 1
+broker  |       delegation.token.expiry.check.interval.ms = 3600000
+broker  |       delegation.token.expiry.time.ms = 86400000
+broker  |       delegation.token.master.key = null
+broker  |       delegation.token.max.lifetime.ms = 604800000
+broker  |       delegation.token.secret.key = null
+broker  |       delete.records.purgatory.purge.interval.requests = 1
+broker  |       delete.topic.enable = true
+broker  |       early.start.listeners = null
+broker  |       eligible.leader.replicas.enable = false
+broker  |       fetch.max.bytes = 57671680
+broker  |       fetch.purgatory.purge.interval.requests = 1000
+broker  |       group.consumer.assignors = [org.apache.kafka.coordinator.group.assignor.UniformAssignor, org.apache.kafka.coordinator.group.assignor.RangeAssignor]
+broker  |       group.consumer.heartbeat.interval.ms = 5000
+broker  |       group.consumer.max.heartbeat.interval.ms = 15000
+broker  |       group.consumer.max.session.timeout.ms = 60000
+broker  |       group.consumer.max.size = 2147483647
+broker  |       group.consumer.migration.policy = disabled
+broker  |       group.consumer.min.heartbeat.interval.ms = 5000
+broker  |       group.consumer.min.session.timeout.ms = 45000
+broker  |       group.consumer.session.timeout.ms = 45000
+broker  |       group.coordinator.append.linger.ms = 10
+broker  |       group.coordinator.new.enable = false
+broker  |       group.coordinator.rebalance.protocols = [classic]
+broker  |       group.coordinator.threads = 1
+broker  |       group.initial.rebalance.delay.ms = 0
+broker  |       group.max.session.timeout.ms = 1800000
+broker  |       group.max.size = 2147483647
+broker  |       group.min.session.timeout.ms = 6000
+broker  |       initial.broker.registration.timeout.ms = 60000
+broker  |       inter.broker.listener.name = PLAINTEXT
+broker  |       inter.broker.protocol.version = 3.8-IV0
+broker  |       kafka.metrics.polling.interval.secs = 10
+broker  |       kafka.metrics.reporters = []
+broker  |       leader.imbalance.check.interval.seconds = 300
+broker  |       leader.imbalance.per.broker.percentage = 10
+broker  |       listener.security.protocol.map = CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+broker  |       listeners = PLAINTEXT://broker:9092,CONTROLLER://broker:9093,PLAINTEXT_HOST://0.0.0.0:29092
+broker  |       log.cleaner.backoff.ms = 15000
+broker  |       log.cleaner.dedupe.buffer.size = 134217728
+broker  |       log.cleaner.delete.retention.ms = 86400000
+broker  |       log.cleaner.enable = true
+broker  |       log.cleaner.io.buffer.load.factor = 0.9
+broker  |       log.cleaner.io.buffer.size = 524288
+broker  |       log.cleaner.io.max.bytes.per.second = 1.7976931348623157E308
+broker  |       log.cleaner.max.compaction.lag.ms = 9223372036854775807
+broker  |       log.cleaner.min.cleanable.ratio = 0.5
+broker  |       log.cleaner.min.compaction.lag.ms = 0
+broker  |       log.cleaner.threads = 1
+broker  |       log.cleanup.policy = [delete]
+broker  |       log.dir = /tmp/kafka-logs
+broker  |       log.dir.failure.timeout.ms = 30000
+broker  |       log.dirs = /var/lib/kafka/data
+broker  |       log.flush.interval.messages = 9223372036854775807
+broker  |       log.flush.interval.ms = null
+broker  |       log.flush.offset.checkpoint.interval.ms = 60000
+broker  |       log.flush.scheduler.interval.ms = 9223372036854775807
+broker  |       log.flush.start.offset.checkpoint.interval.ms = 60000
+broker  |       log.index.interval.bytes = 4096
+broker  |       log.index.size.max.bytes = 10485760
+broker  |       log.initial.task.delay.ms = 30000
+broker  |       log.local.retention.bytes = -2
+broker  |       log.local.retention.ms = -2
+broker  |       log.message.downconversion.enable = true
+broker  |       log.message.format.version = 3.0-IV1
+broker  |       log.message.timestamp.after.max.ms = 9223372036854775807
+broker  |       log.message.timestamp.before.max.ms = 9223372036854775807
+broker  |       log.message.timestamp.difference.max.ms = 9223372036854775807
+broker  |       log.message.timestamp.type = CreateTime
+broker  |       log.preallocate = false
+broker  |       log.retention.bytes = -1
+broker  |       log.retention.check.interval.ms = 300000
+broker  |       log.retention.hours = 168
+broker  |       log.retention.minutes = null
+broker  |       log.retention.ms = null
+broker  |       log.roll.hours = 168
+broker  |       log.roll.jitter.hours = 0
+broker  |       log.roll.jitter.ms = null
+broker  |       log.roll.ms = null
+broker  |       log.segment.bytes = 1073741824
+broker  |       log.segment.delete.delay.ms = 60000
+broker  |       max.connection.creation.rate = 2147483647
+broker  |       max.connections = 2147483647
+broker  |       max.connections.per.ip = 2147483647
+broker  |       max.connections.per.ip.overrides =
+broker  |       max.incremental.fetch.session.cache.slots = 1000
+broker  |       max.request.partition.size.limit = 2000
+broker  |       message.max.bytes = 1048588
+broker  |       metadata.log.dir = null
+broker  |       metadata.log.max.record.bytes.between.snapshots = 20971520
+broker  |       metadata.log.max.snapshot.interval.ms = 3600000
+broker  |       metadata.log.segment.bytes = 1073741824
+broker  |       metadata.log.segment.min.bytes = 8388608
+broker  |       metadata.log.segment.ms = 604800000
+broker  |       metadata.max.idle.interval.ms = 500
+broker  |       metadata.max.retention.bytes = 104857600
+broker  |       metadata.max.retention.ms = 604800000
+broker  |       metric.reporters = []
+broker  |       metrics.num.samples = 2
+broker  |       metrics.recording.level = INFO
+broker  |       metrics.sample.window.ms = 30000
+broker  |       min.insync.replicas = 1
+broker  |       node.id = 1
+broker  |       num.io.threads = 8
+broker  |       num.network.threads = 3
+broker  |       num.partitions = 1
+broker  |       num.recovery.threads.per.data.dir = 1
+broker  |       num.replica.alter.log.dirs.threads = null
+broker  |       num.replica.fetchers = 1
+broker  |       offset.metadata.max.bytes = 4096
+broker  |       offsets.commit.required.acks = -1
+broker  |       offsets.commit.timeout.ms = 5000
+broker  |       offsets.load.buffer.size = 5242880
+broker  |       offsets.retention.check.interval.ms = 600000
+broker  |       offsets.retention.minutes = 10080
+broker  |       offsets.topic.compression.codec = 0
+broker  |       offsets.topic.num.partitions = 50
+broker  |       offsets.topic.replication.factor = 1
+broker  |       offsets.topic.segment.bytes = 104857600
+broker  |       password.encoder.cipher.algorithm = AES/CBC/PKCS5Padding
+broker  |       password.encoder.iterations = 4096
+broker  |       password.encoder.key.length = 128
+broker  |       password.encoder.keyfactory.algorithm = null
+broker  |       password.encoder.old.secret = null
+broker  |       password.encoder.secret = null
+broker  |       principal.builder.class = class org.apache.kafka.common.security.authenticator.DefaultKafkaPrincipalBuilder
+broker  |       process.roles = [broker, controller]
+broker  |       producer.id.expiration.check.interval.ms = 600000
+broker  |       producer.id.expiration.ms = 86400000
+broker  |       producer.purgatory.purge.interval.requests = 1000
+broker  |       queued.max.request.bytes = -1
+broker  |       queued.max.requests = 500
+broker  |       quota.window.num = 11
+broker  |       quota.window.size.seconds = 1
+broker  |       remote.fetch.max.wait.ms = 500
+broker  |       remote.log.index.file.cache.total.size.bytes = 1073741824
+broker  |       remote.log.manager.copier.thread.pool.size = 10
+broker  |       remote.log.manager.copy.max.bytes.per.second = 9223372036854775807
+broker  |       remote.log.manager.copy.quota.window.num = 11
+broker  |       remote.log.manager.copy.quota.window.size.seconds = 1
+broker  |       remote.log.manager.expiration.thread.pool.size = 10
+broker  |       remote.log.manager.fetch.max.bytes.per.second = 9223372036854775807
+broker  |       remote.log.manager.fetch.quota.window.num = 11
+broker  |       remote.log.manager.fetch.quota.window.size.seconds = 1
+broker  |       remote.log.manager.task.interval.ms = 30000
+broker  |       remote.log.manager.task.retry.backoff.max.ms = 30000
+broker  |       remote.log.manager.task.retry.backoff.ms = 500
+broker  |       remote.log.manager.task.retry.jitter = 0.2
+broker  |       remote.log.manager.thread.pool.size = 10
+broker  |       remote.log.metadata.custom.metadata.max.bytes = 128
+broker  |       remote.log.metadata.manager.class.name = org.apache.kafka.server.log.remote.metadata.storage.TopicBasedRemoteLogMetadataManager
+broker  |       remote.log.metadata.manager.class.path = null
+broker  |       remote.log.metadata.manager.impl.prefix = rlmm.config.
+broker  |       remote.log.metadata.manager.listener.name = null
+broker  |       remote.log.reader.max.pending.tasks = 100
+broker  |       remote.log.reader.threads = 10
+broker  |       remote.log.storage.manager.class.name = null
+broker  |       remote.log.storage.manager.class.path = null
+broker  |       remote.log.storage.manager.impl.prefix = rsm.config.
+broker  |       remote.log.storage.system.enable = false
+broker  |       replica.fetch.backoff.ms = 1000
+broker  |       replica.fetch.max.bytes = 1048576
+broker  |       replica.fetch.min.bytes = 1
+broker  |       replica.fetch.response.max.bytes = 10485760
+broker  |       replica.fetch.wait.max.ms = 500
+broker  |       replica.high.watermark.checkpoint.interval.ms = 5000
+broker  |       replica.lag.time.max.ms = 30000
+broker  |       replica.selector.class = null
+broker  |       replica.socket.receive.buffer.bytes = 65536
+broker  |       replica.socket.timeout.ms = 30000
+broker  |       replication.quota.window.num = 11
+broker  |       replication.quota.window.size.seconds = 1
+broker  |       request.timeout.ms = 30000
+broker  |       reserved.broker.max.id = 1000
+broker  |       sasl.client.callback.handler.class = null
+broker  |       sasl.enabled.mechanisms = [GSSAPI]
+broker  |       sasl.jaas.config = null
+broker  |       sasl.kerberos.kinit.cmd = /usr/bin/kinit
+broker  |       sasl.kerberos.min.time.before.relogin = 60000
+broker  |       sasl.kerberos.principal.to.local.rules = [DEFAULT]
+broker  |       sasl.kerberos.service.name = null
+broker  |       sasl.kerberos.ticket.renew.jitter = 0.05
+broker  |       sasl.kerberos.ticket.renew.window.factor = 0.8
+broker  |       sasl.login.callback.handler.class = null
+broker  |       sasl.login.class = null
+broker  |       sasl.login.connect.timeout.ms = null
+broker  |       sasl.login.read.timeout.ms = null
+broker  |       sasl.login.refresh.buffer.seconds = 300
+broker  |       sasl.login.refresh.min.period.seconds = 60
+broker  |       sasl.login.refresh.window.factor = 0.8
+broker  |       sasl.login.refresh.window.jitter = 0.05
+broker  |       sasl.login.retry.backoff.max.ms = 10000
+broker  |       sasl.login.retry.backoff.ms = 100
+broker  |       sasl.mechanism.controller.protocol = GSSAPI
+broker  |       sasl.mechanism.inter.broker.protocol = GSSAPI
+broker  |       sasl.oauthbearer.clock.skew.seconds = 30
+broker  |       sasl.oauthbearer.expected.audience = null
+broker  |       sasl.oauthbearer.expected.issuer = null
+broker  |       sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+broker  |       sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+broker  |       sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+broker  |       sasl.oauthbearer.jwks.endpoint.url = null
+broker  |       sasl.oauthbearer.scope.claim.name = scope
+broker  |       sasl.oauthbearer.sub.claim.name = sub
+broker  |       sasl.oauthbearer.token.endpoint.url = null
+broker  |       sasl.server.callback.handler.class = null
+broker  |       sasl.server.max.receive.size = 524288
+broker  |       security.inter.broker.protocol = PLAINTEXT
+broker  |       security.providers = null
+broker  |       server.max.startup.time.ms = 9223372036854775807
+broker  |       socket.connection.setup.timeout.max.ms = 30000
+broker  |       socket.connection.setup.timeout.ms = 10000
+broker  |       socket.listen.backlog.size = 50
+broker  |       socket.receive.buffer.bytes = 102400
+broker  |       socket.request.max.bytes = 104857600
+broker  |       socket.send.buffer.bytes = 102400
+broker  |       ssl.allow.dn.changes = false
+broker  |       ssl.allow.san.changes = false
+broker  |       ssl.cipher.suites = []
+broker  |       ssl.client.auth = none
+broker  |       ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+broker  |       ssl.endpoint.identification.algorithm = https
+broker  |       ssl.engine.factory.class = null
+broker  |       ssl.key.password = null
+broker  |       ssl.keymanager.algorithm = SunX509
+broker  |       ssl.keystore.certificate.chain = null
+broker  |       ssl.keystore.key = null
+broker  |       ssl.keystore.location = null
+broker  |       ssl.keystore.password = null
+broker  |       ssl.keystore.type = JKS
+broker  |       ssl.principal.mapping.rules = DEFAULT
+broker  |       ssl.protocol = TLSv1.3
+broker  |       ssl.provider = null
+broker  |       ssl.secure.random.implementation = null
+broker  |       ssl.trustmanager.algorithm = PKIX
+broker  |       ssl.truststore.certificates = null
+broker  |       ssl.truststore.location = null
+broker  |       ssl.truststore.password = null
+broker  |       ssl.truststore.type = JKS
+broker  |       telemetry.max.bytes = 1048576
+broker  |       transaction.abort.timed.out.transaction.cleanup.interval.ms = 10000
+broker  |       transaction.max.timeout.ms = 900000
+broker  |       transaction.partition.verification.enable = true
+broker  |       transaction.remove.expired.transaction.cleanup.interval.ms = 3600000
+broker  |       transaction.state.log.load.buffer.size = 5242880
+broker  |       transaction.state.log.min.isr = 2
+broker  |       transaction.state.log.num.partitions = 50
+broker  |       transaction.state.log.replication.factor = 3
+broker  |       transaction.state.log.segment.bytes = 104857600
+broker  |       transactional.id.expiration.ms = 604800000
+broker  |       unclean.leader.election.enable = false
+broker  |       unstable.api.versions.enable = false
+broker  |       unstable.feature.versions.enable = false
+broker  |       zookeeper.clientCnxnSocket = null
+broker  |       zookeeper.connect =
+broker  |       zookeeper.connection.timeout.ms = null
+broker  |       zookeeper.max.in.flight.requests = 10
+broker  |       zookeeper.metadata.migration.enable = false
+broker  |       zookeeper.metadata.migration.min.batch.size = 200
+broker  |       zookeeper.session.timeout.ms = 18000
+broker  |       zookeeper.set.acl = false
+broker  |       zookeeper.ssl.cipher.suites = null
+broker  |       zookeeper.ssl.client.enable = false
+broker  |       zookeeper.ssl.crl.enable = false
+broker  |       zookeeper.ssl.enabled.protocols = null
+broker  |       zookeeper.ssl.endpoint.identification.algorithm = HTTPS
+broker  |       zookeeper.ssl.keystore.location = null
+broker  |       zookeeper.ssl.keystore.password = null
+broker  |       zookeeper.ssl.keystore.type = null
+broker  |       zookeeper.ssl.ocsp.enable = false
+broker  |       zookeeper.ssl.protocol = TLSv1.2
+broker  |       zookeeper.ssl.truststore.location = null
+broker  |       zookeeper.ssl.truststore.password = null
+broker  |       zookeeper.ssl.truststore.type = null
+broker  |  (kafka.server.KafkaConfig)
+broker  | [2026-04-17 09:09:32,924] INFO RemoteLogManagerConfig values:
+broker  |       log.local.retention.bytes = -2
+broker  |       log.local.retention.ms = -2
+broker  |       remote.fetch.max.wait.ms = 500
+broker  |       remote.log.index.file.cache.total.size.bytes = 1073741824
+broker  |       remote.log.manager.copier.thread.pool.size = 10
+broker  |       remote.log.manager.copy.max.bytes.per.second = 9223372036854775807
+broker  |       remote.log.manager.copy.quota.window.num = 11
+broker  |       remote.log.manager.copy.quota.window.size.seconds = 1
+broker  |       remote.log.manager.expiration.thread.pool.size = 10
+broker  |       remote.log.manager.fetch.max.bytes.per.second = 9223372036854775807
+broker  |       remote.log.manager.fetch.quota.window.num = 11
+broker  |       remote.log.manager.fetch.quota.window.size.seconds = 1
+broker  |       remote.log.manager.task.interval.ms = 30000
+broker  |       remote.log.manager.task.retry.backoff.max.ms = 30000
+broker  |       remote.log.manager.task.retry.backoff.ms = 500
+broker  |       remote.log.manager.task.retry.jitter = 0.2
+broker  |       remote.log.manager.thread.pool.size = 10
+broker  |       remote.log.metadata.custom.metadata.max.bytes = 128
+broker  |       remote.log.metadata.manager.class.name = org.apache.kafka.server.log.remote.metadata.storage.TopicBasedRemoteLogMetadataManager
+broker  |       remote.log.metadata.manager.class.path = null
+broker  |       remote.log.metadata.manager.impl.prefix = rlmm.config.
+broker  |       remote.log.metadata.manager.listener.name = null
+broker  |       remote.log.reader.max.pending.tasks = 100
+broker  |       remote.log.reader.threads = 10
+broker  |       remote.log.storage.manager.class.name = null
+broker  |       remote.log.storage.manager.class.path = null
+broker  |       remote.log.storage.manager.impl.prefix = rsm.config.
+broker  |       remote.log.storage.system.enable = false
+broker  |  (org.apache.kafka.server.log.remote.storage.RemoteLogManagerConfig)
+broker  | [2026-04-17 09:09:32,981] INFO [BrokerServer id=1] Waiting for the broker to be unfenced (kafka.server.BrokerServer)
+broker  | [2026-04-17 09:09:32,984] INFO [QuorumController id=1] The request from broker 1 to unfence has been granted because it has caught up with the offset of its register broker record 10. (org.apache.kafka.controller.BrokerHeartbeatManager)
+broker  | [2026-04-17 09:09:33,081] INFO [QuorumController id=1] Replayed BrokerRegistrationChangeRecord modifying the registration for broker 1: BrokerRegistrationChangeRecord(brokerId=1, brokerEpoch=10, fenced=-1, inControlledShutdown=0, logDirs=[]) (org.apache.kafka.controller.ClusterControlManager)
+broker  | [2026-04-17 09:09:33,135] INFO [BrokerLifecycleManager id=1] The broker has been unfenced. Transitioning from RECOVERY to RUNNING. (kafka.server.BrokerLifecycleManager)
+broker  | [2026-04-17 09:09:33,136] INFO [BrokerServer id=1] Finished waiting for the broker to be unfenced (kafka.server.BrokerServer)
+broker  | [2026-04-17 09:09:33,138] INFO authorizerStart completed for endpoint PLAINTEXT. Endpoint is now READY. (org.apache.kafka.server.network.EndpointReadyFutures)
+broker  | [2026-04-17 09:09:33,148] INFO authorizerStart completed for endpoint PLAINTEXT_HOST. Endpoint is now READY. (org.apache.kafka.server.network.EndpointReadyFutures)
+broker  | [2026-04-17 09:09:33,149] INFO [SocketServer listenerType=BROKER, nodeId=1] Enabling request processing. (kafka.network.SocketServer)
+broker  | [2026-04-17 09:09:33,150] INFO Awaiting socket connections on 0.0.0.0:29092. (kafka.network.DataPlaneAcceptor)
+broker  | [2026-04-17 09:09:33,166] INFO Awaiting socket connections on broker:9092. (kafka.network.DataPlaneAcceptor)
+broker  | [2026-04-17 09:09:33,178] INFO [BrokerServer id=1] Waiting for all of the authorizer futures to be completed (kafka.server.BrokerServer)
+broker  | [2026-04-17 09:09:33,178] INFO [BrokerServer id=1] Finished waiting for all of the authorizer futures to be completed (kafka.server.BrokerServer)
+broker  | [2026-04-17 09:09:33,178] INFO [BrokerServer id=1] Waiting for all of the SocketServer Acceptors to be started (kafka.server.BrokerServer)
+broker  | [2026-04-17 09:09:33,178] INFO [BrokerServer id=1] Finished waiting for all of the SocketServer Acceptors to be started (kafka.server.BrokerServer)
+broker  | [2026-04-17 09:09:33,178] INFO [BrokerServer id=1] Transition from STARTING to STARTED (kafka.server.BrokerServer)
+broker  | [2026-04-17 09:09:33,179] INFO Kafka version: 7.8.0-ccs (org.apache.kafka.common.utils.AppInfoParser)
+broker  | [2026-04-17 09:09:33,179] INFO Kafka commitId: cc7168da1fddfcfde48b42031adde57bb5bcf529 (org.apache.kafka.common.utils.AppInfoParser)
+broker  | [2026-04-17 09:09:33,180] INFO Kafka startTimeMs: 1776416973178 (org.apache.kafka.common.utils.AppInfoParser)
+broker  | [2026-04-17 09:09:33,185] INFO [KafkaRaftServer nodeId=1] Kafka Server started (kafka.server.KafkaRaftServer)
+jupyter  | [I 2026-04-17 09:10:43.765 ServerApp] 302 GET / (@172.18.0.1) 1.73ms
+jupyter  | [I 2026-04-17 09:10:43.806 LabApp] 302 GET /lab? (@172.18.0.1) 1.71ms
+jupyter  | [I 2026-04-17 09:10:52.828 ServerApp] User f180c579b3fa4d11a6f832a3f7e2fe4b logged in.
+jupyter  | [I 2026-04-17 09:10:52.829 ServerApp] 302 POST /login?next=%2Flab%3F (f180c579b3fa4d11a6f832a3f7e2fe4b@172.18.0.1) 36.11ms
+jupyter  | [I 2026-04-17 09:11:07.065 LabApp] Build is up to date
+jupyter  | [I 2026-04-17 09:11:54.995 ServerApp] Kernel started: 5afe75a6-b427-46ef-9bd1-54f079298114
+jupyter  | [I 2026-04-17 09:11:58.417 ServerApp] Connecting to kernel 5afe75a6-b427-46ef-9bd1-54f079298114.
+jupyter  | [I 2026-04-17 09:11:58.434 ServerApp] Connecting to kernel 5afe75a6-b427-46ef-9bd1-54f079298114.
+jupyter  | [I 2026-04-17 09:11:58.509 ServerApp] Connecting to kernel 5afe75a6-b427-46ef-9bd1-54f079298114.
+jupyter  | [I 2026-04-17 09:12:03.482 ServerApp] Starting buffering for 5afe75a6-b427-46ef-9bd1-54f079298114:35234d44-c29d-4c92-b5b7-02d4ede0e325
+jupyter  | [I 2026-04-17 09:12:06.076 ServerApp] New terminal with automatic name: 1
+(rta_env) PS C:\Users\barto\jupyterlab-project> docker compose down
+[+] down 4/4
+ ✔ Container jupyter                  Removed                                                     2.4s
+ ✔ Container broker                   Removed                                                     2.4s
+ ✔ Container redis                    Removed                                                     1.4s
+ ✔ Network jupyterlab-project_default Removed     
