@@ -1,4 +1,4 @@
-from kafka import KafkaConsumer
+﻿from kafka import KafkaConsumer
 import json
 
 consumer = KafkaConsumer(
@@ -12,9 +12,9 @@ consumer = KafkaConsumer(
 for message in consumer:
     tx = message.value
     if tx['amount'] > 3000:
-        risk = "🔴 HIGH"
+        risk = 'HIGH'
     elif tx['amount'] > 1000:
-        risk = "🟡 MEDIUM"
+        risk = 'MEDIUM'
     else:
-        risk = "🟢 LOW"
-    print(f"{risk} | {tx['tx_id']} | {tx['amount']:.2f} PLN | {tx['store']}")
+        risk = 'LOW'
+    print(f'{risk} | {tx["tx_id"]} | {tx["amount"]:.2f} PLN | {tx["store"]}')
